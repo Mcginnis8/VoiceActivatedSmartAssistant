@@ -44,9 +44,9 @@ void sayHello() {
 }
 
 void start_main_listen() {
-    system("sudo arecord -D plughw:1,0 -f cd -r 16000 -d 3 test.wav &");
+    system("sox -d test.wav trim 0 3");
     std::this_thread::sleep_for(std::chrono::seconds(3));
-    system("sudo ../whisper.cpp/main -m ../whisper.cpp/models/ggml-tiny.en.bin -f test.wav -otxt");
+    system("../whisper.cpp/main -m ../whisper.cpp/models/ggml-tiny.en.bin -f test.wav -otxt");
     std::vector<std::string> targets = {"Set a 10 second timer", "Say Hello"};
     std::vector<std::string> closestMatches(targets.size());
     std::vector<int> minDistances(targets.size(), 9999999);
