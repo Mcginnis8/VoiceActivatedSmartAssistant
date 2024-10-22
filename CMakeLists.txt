@@ -13,12 +13,16 @@ add_subdirectory(whisper.cpp)
 # Add source files
 file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/main.cpp)
 
+# Find PortAudio
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(PORTAUDIO REQUIRED portaudio-2.0)
+
 # Include directories
-include_directories(${CMAKE_SOURCE_DIR}/whisper.cpp/include)
-include_directories(${CMAKE_SOURCE_DIR}/whisper.cpp/ggml/include)
+include_directories(${PORTAUDIO_INCLUDE_DIRS})
 
 # Add the executable
 add_executable(SmartAssistant ${SOURCES})
 
 # Link libraries
-target_link_libraries(SmartAssistant PUBLIC whisper common common-sdl ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(SmartAssistant PUBLIC ${PORTAUDIO_LIBRARIES})
+target_link_libraries(SmartAssistant PUBLIC whisper)

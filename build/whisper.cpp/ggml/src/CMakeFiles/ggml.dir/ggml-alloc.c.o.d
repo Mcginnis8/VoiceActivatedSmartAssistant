@@ -1,8 +1,8 @@
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o: \
- /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-alloc.c \
+ /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-alloc.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/../include/ggml-alloc.h \
- /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/../include/ggml.h \
+ /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/../include/ggml-alloc.h \
+ /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/../include/ggml.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
@@ -33,9 +33,9 @@ whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o: \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
- /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-backend-impl.h \
- /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/../include/ggml-backend.h \
- /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-impl.h \
+ /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-backend-impl.h \
+ /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/../include/ggml-backend.h \
+ /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-impl.h \
  /usr/include/assert.h /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \

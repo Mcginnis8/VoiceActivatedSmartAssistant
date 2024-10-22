@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/src
+# Install script for directory: /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

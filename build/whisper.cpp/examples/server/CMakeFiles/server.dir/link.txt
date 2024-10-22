@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/server.dir/server.cpp.o -o ../../../bin/server  -Wl,-rpath,/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src:/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src ../libcommon.a ../../src/libwhisper.so.1.7.1 ../../ggml/src/libggml.so 

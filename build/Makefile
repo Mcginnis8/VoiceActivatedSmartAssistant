@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant
+CMAKE_SOURCE_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build
+CMAKE_BINARY_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -200,71 +200,6 @@ whisper/fast:
 	$(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/build
 .PHONY : whisper/fast
 
-#=============================================================================
-# Target rules for targets named common
-
-# Build rule for target.
-common: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common
-.PHONY : common
-
-# fast build rule for target.
-common/fast:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/CMakeFiles/common.dir/build.make whisper.cpp/examples/CMakeFiles/common.dir/build
-.PHONY : common/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/main/CMakeFiles/main.dir/build.make whisper.cpp/examples/main/CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named server
-
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/server/CMakeFiles/server.dir/build.make whisper.cpp/examples/server/CMakeFiles/server.dir/build
-.PHONY : server/fast
-
-#=============================================================================
-# Target rules for targets named bench
-
-# Build rule for target.
-bench: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench
-.PHONY : bench
-
-# fast build rule for target.
-bench/fast:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/bench/CMakeFiles/bench.dir/build.make whisper.cpp/examples/bench/CMakeFiles/bench.dir/build
-.PHONY : bench/fast
-
-#=============================================================================
-# Target rules for targets named quantize
-
-# Build rule for target.
-quantize: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quantize
-.PHONY : quantize
-
-# fast build rule for target.
-quantize/fast:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/build.make whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/build
-.PHONY : quantize/fast
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -289,102 +224,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-whisper.cpp/examples/common-ggml.o: whisper.cpp/examples/common-ggml.cpp.o
-.PHONY : whisper.cpp/examples/common-ggml.o
-
-# target to build an object file
-whisper.cpp/examples/common-ggml.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o
-.PHONY : whisper.cpp/examples/common-ggml.cpp.o
-
-whisper.cpp/examples/common-ggml.i: whisper.cpp/examples/common-ggml.cpp.i
-.PHONY : whisper.cpp/examples/common-ggml.i
-
-# target to preprocess a source file
-whisper.cpp/examples/common-ggml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.i
-.PHONY : whisper.cpp/examples/common-ggml.cpp.i
-
-whisper.cpp/examples/common-ggml.s: whisper.cpp/examples/common-ggml.cpp.s
-.PHONY : whisper.cpp/examples/common-ggml.s
-
-# target to generate assembly for a file
-whisper.cpp/examples/common-ggml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.s
-.PHONY : whisper.cpp/examples/common-ggml.cpp.s
-
-whisper.cpp/examples/common-sdl.o: whisper.cpp/examples/common-sdl.cpp.o
-.PHONY : whisper.cpp/examples/common-sdl.o
-
-# target to build an object file
-whisper.cpp/examples/common-sdl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o
-.PHONY : whisper.cpp/examples/common-sdl.cpp.o
-
-whisper.cpp/examples/common-sdl.i: whisper.cpp/examples/common-sdl.cpp.i
-.PHONY : whisper.cpp/examples/common-sdl.i
-
-# target to preprocess a source file
-whisper.cpp/examples/common-sdl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.i
-.PHONY : whisper.cpp/examples/common-sdl.cpp.i
-
-whisper.cpp/examples/common-sdl.s: whisper.cpp/examples/common-sdl.cpp.s
-.PHONY : whisper.cpp/examples/common-sdl.s
-
-# target to generate assembly for a file
-whisper.cpp/examples/common-sdl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.s
-.PHONY : whisper.cpp/examples/common-sdl.cpp.s
-
-whisper.cpp/examples/common.o: whisper.cpp/examples/common.cpp.o
-.PHONY : whisper.cpp/examples/common.o
-
-# target to build an object file
-whisper.cpp/examples/common.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o
-.PHONY : whisper.cpp/examples/common.cpp.o
-
-whisper.cpp/examples/common.i: whisper.cpp/examples/common.cpp.i
-.PHONY : whisper.cpp/examples/common.i
-
-# target to preprocess a source file
-whisper.cpp/examples/common.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.i
-.PHONY : whisper.cpp/examples/common.cpp.i
-
-whisper.cpp/examples/common.s: whisper.cpp/examples/common.cpp.s
-.PHONY : whisper.cpp/examples/common.s
-
-# target to generate assembly for a file
-whisper.cpp/examples/common.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.s
-.PHONY : whisper.cpp/examples/common.cpp.s
-
-whisper.cpp/examples/grammar-parser.o: whisper.cpp/examples/grammar-parser.cpp.o
-.PHONY : whisper.cpp/examples/grammar-parser.o
-
-# target to build an object file
-whisper.cpp/examples/grammar-parser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o
-.PHONY : whisper.cpp/examples/grammar-parser.cpp.o
-
-whisper.cpp/examples/grammar-parser.i: whisper.cpp/examples/grammar-parser.cpp.i
-.PHONY : whisper.cpp/examples/grammar-parser.i
-
-# target to preprocess a source file
-whisper.cpp/examples/grammar-parser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.i
-.PHONY : whisper.cpp/examples/grammar-parser.cpp.i
-
-whisper.cpp/examples/grammar-parser.s: whisper.cpp/examples/grammar-parser.cpp.s
-.PHONY : whisper.cpp/examples/grammar-parser.s
-
-# target to generate assembly for a file
-whisper.cpp/examples/grammar-parser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.s
-.PHONY : whisper.cpp/examples/grammar-parser.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -398,28 +237,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... SmartAssistant"
-	@echo "... bench"
-	@echo "... common"
 	@echo "... ggml"
-	@echo "... main"
-	@echo "... quantize"
-	@echo "... server"
 	@echo "... whisper"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... whisper.cpp/examples/common-ggml.o"
-	@echo "... whisper.cpp/examples/common-ggml.i"
-	@echo "... whisper.cpp/examples/common-ggml.s"
-	@echo "... whisper.cpp/examples/common-sdl.o"
-	@echo "... whisper.cpp/examples/common-sdl.i"
-	@echo "... whisper.cpp/examples/common-sdl.s"
-	@echo "... whisper.cpp/examples/common.o"
-	@echo "... whisper.cpp/examples/common.i"
-	@echo "... whisper.cpp/examples/common.s"
-	@echo "... whisper.cpp/examples/grammar-parser.o"
-	@echo "... whisper.cpp/examples/grammar-parser.i"
-	@echo "... whisper.cpp/examples/grammar-parser.s"
 .PHONY : help
 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp
+# Install script for directory: /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -55,8 +55,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src/libwhisper.so.1.7.1"
-    "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src/libwhisper.so.1"
+    "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src/libwhisper.so.1.7.1"
+    "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src/libwhisper.so.1"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwhisper.so.1.7.1"
@@ -66,7 +66,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src:"
+           OLD_RPATH "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src:"
            NEW_RPATH "")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/usr/bin/strip" "${file}")
@@ -82,12 +82,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwhisper.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src/libwhisper.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src/libwhisper.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwhisper.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwhisper.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwhisper.so"
-         OLD_RPATH "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src:"
+         OLD_RPATH "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwhisper.so")
@@ -96,24 +96,24 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/include/whisper.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/include/whisper.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/whisper" TYPE FILE FILES
-    "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/whisper-config.cmake"
-    "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/whisper-version.cmake"
+    "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/whisper-config.cmake"
+    "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/whisper-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/whisper.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/whisper.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/cmake_install.cmake")
-  include("/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src/cmake_install.cmake")
+  include("/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/cmake_install.cmake")
+  include("/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src/cmake_install.cmake")
 
 endif()
 

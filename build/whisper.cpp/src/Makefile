@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant
+CMAKE_SOURCE_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build
+CMAKE_BINARY_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src//CMakeFiles/progress.marks
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src//CMakeFiles/progress.marks
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/clean
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/preinstall
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/preinstall
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 whisper.cpp/src/CMakeFiles/whisper.dir/rule:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/CMakeFiles/whisper.dir/rule
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/CMakeFiles/whisper.dir/rule
 .PHONY : whisper.cpp/src/CMakeFiles/whisper.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ whisper: whisper.cpp/src/CMakeFiles/whisper.dir/rule
 
 # fast build rule for target.
 whisper/fast:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/build
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/build
 .PHONY : whisper/fast
 
 whisper.o: whisper.cpp.o
@@ -180,7 +180,7 @@ whisper.o: whisper.cpp.o
 
 # target to build an object file
 whisper.cpp.o:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o
 .PHONY : whisper.cpp.o
 
 whisper.i: whisper.cpp.i
@@ -188,7 +188,7 @@ whisper.i: whisper.cpp.i
 
 # target to preprocess a source file
 whisper.cpp.i:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.i
 .PHONY : whisper.cpp.i
 
 whisper.s: whisper.cpp.s
@@ -196,7 +196,7 @@ whisper.s: whisper.cpp.s
 
 # target to generate assembly for a file
 whisper.cpp.s:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.s
 .PHONY : whisper.cpp.s
 
 # Help Target
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

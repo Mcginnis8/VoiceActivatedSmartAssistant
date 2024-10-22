@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant
+CMAKE_SOURCE_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build
+CMAKE_BINARY_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SmartAssistant.dir/depend.make
@@ -72,98 +72,34 @@ include CMakeFiles/SmartAssistant.dir/flags.make
 CMakeFiles/SmartAssistant.dir/main.cpp.o: CMakeFiles/SmartAssistant.dir/flags.make
 CMakeFiles/SmartAssistant.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SmartAssistant.dir/main.cpp.o: CMakeFiles/SmartAssistant.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SmartAssistant.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SmartAssistant.dir/main.cpp.o -MF CMakeFiles/SmartAssistant.dir/main.cpp.o.d -o CMakeFiles/SmartAssistant.dir/main.cpp.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SmartAssistant.dir/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SmartAssistant.dir/main.cpp.o -MF CMakeFiles/SmartAssistant.dir/main.cpp.o.d -o CMakeFiles/SmartAssistant.dir/main.cpp.o -c /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/main.cpp
 
 CMakeFiles/SmartAssistant.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SmartAssistant.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/main.cpp > CMakeFiles/SmartAssistant.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/main.cpp > CMakeFiles/SmartAssistant.dir/main.cpp.i
 
 CMakeFiles/SmartAssistant.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SmartAssistant.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/main.cpp -o CMakeFiles/SmartAssistant.dir/main.cpp.s
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o: CMakeFiles/SmartAssistant.dir/flags.make
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o: ../whisper.cpp/examples/common-sdl.cpp
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o: CMakeFiles/SmartAssistant.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o -MF CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o.d -o CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common-sdl.cpp
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common-sdl.cpp > CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.i
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common-sdl.cpp -o CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.s
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o: CMakeFiles/SmartAssistant.dir/flags.make
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o: ../whisper.cpp/examples/common.cpp
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o: CMakeFiles/SmartAssistant.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o -MF CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o.d -o CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common.cpp
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common.cpp > CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.i
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common.cpp -o CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.s
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o: CMakeFiles/SmartAssistant.dir/flags.make
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o: ../whisper.cpp/examples/common-ggml.cpp
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o: CMakeFiles/SmartAssistant.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o -MF CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o.d -o CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common-ggml.cpp
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common-ggml.cpp > CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.i
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/common-ggml.cpp -o CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.s
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o: CMakeFiles/SmartAssistant.dir/flags.make
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o: ../whisper.cpp/examples/grammar-parser.cpp
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o: CMakeFiles/SmartAssistant.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o -MF CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o.d -o CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/grammar-parser.cpp
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/grammar-parser.cpp > CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.i
-
-CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/examples/grammar-parser.cpp -o CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/main.cpp -o CMakeFiles/SmartAssistant.dir/main.cpp.s
 
 # Object files for target SmartAssistant
 SmartAssistant_OBJECTS = \
-"CMakeFiles/SmartAssistant.dir/main.cpp.o" \
-"CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o" \
-"CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o" \
-"CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o" \
-"CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o"
+"CMakeFiles/SmartAssistant.dir/main.cpp.o"
 
 # External object files for target SmartAssistant
 SmartAssistant_EXTERNAL_OBJECTS =
 
-bin/SmartAssistant: CMakeFiles/SmartAssistant.dir/main.cpp.o
-bin/SmartAssistant: CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-sdl.cpp.o
-bin/SmartAssistant: CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common.cpp.o
-bin/SmartAssistant: CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/common-ggml.cpp.o
-bin/SmartAssistant: CMakeFiles/SmartAssistant.dir/whisper.cpp/examples/grammar-parser.cpp.o
-bin/SmartAssistant: CMakeFiles/SmartAssistant.dir/build.make
-bin/SmartAssistant: whisper.cpp/src/libwhisper.so.1.7.1
-bin/SmartAssistant: whisper.cpp/ggml/src/libggml.so
-bin/SmartAssistant: CMakeFiles/SmartAssistant.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/SmartAssistant"
+SmartAssistant: CMakeFiles/SmartAssistant.dir/main.cpp.o
+SmartAssistant: CMakeFiles/SmartAssistant.dir/build.make
+SmartAssistant: whisper.cpp/src/libwhisper.so.1.7.1
+SmartAssistant: whisper.cpp/ggml/src/libggml.so
+SmartAssistant: CMakeFiles/SmartAssistant.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SmartAssistant"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SmartAssistant.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/SmartAssistant.dir/build: bin/SmartAssistant
+CMakeFiles/SmartAssistant.dir/build: SmartAssistant
 .PHONY : CMakeFiles/SmartAssistant.dir/build
 
 CMakeFiles/SmartAssistant.dir/clean:
@@ -171,6 +107,6 @@ CMakeFiles/SmartAssistant.dir/clean:
 .PHONY : CMakeFiles/SmartAssistant.dir/clean
 
 CMakeFiles/SmartAssistant.dir/depend:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles/SmartAssistant.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles/SmartAssistant.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SmartAssistant.dir/depend
 

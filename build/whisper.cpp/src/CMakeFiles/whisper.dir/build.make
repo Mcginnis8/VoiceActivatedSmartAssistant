@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant
+CMAKE_SOURCE_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build
+CMAKE_BINARY_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build
 
 # Include any dependencies generated for this target.
 include whisper.cpp/src/CMakeFiles/whisper.dir/depend.make
@@ -72,16 +72,16 @@ include whisper.cpp/src/CMakeFiles/whisper.dir/flags.make
 whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o: whisper.cpp/src/CMakeFiles/whisper.dir/flags.make
 whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o: ../whisper.cpp/src/whisper.cpp
 whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o: whisper.cpp/src/CMakeFiles/whisper.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o -MF CMakeFiles/whisper.dir/whisper.cpp.o.d -o CMakeFiles/whisper.dir/whisper.cpp.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/src/whisper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o"
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.o -MF CMakeFiles/whisper.dir/whisper.cpp.o.d -o CMakeFiles/whisper.dir/whisper.cpp.o -c /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/src/whisper.cpp
 
 whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whisper.dir/whisper.cpp.i"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/src/whisper.cpp > CMakeFiles/whisper.dir/whisper.cpp.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/src/whisper.cpp > CMakeFiles/whisper.dir/whisper.cpp.i
 
 whisper.cpp/src/CMakeFiles/whisper.dir/whisper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whisper.dir/whisper.cpp.s"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/src/whisper.cpp -o CMakeFiles/whisper.dir/whisper.cpp.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/src/whisper.cpp -o CMakeFiles/whisper.dir/whisper.cpp.s
 
 # Object files for target whisper
 whisper_OBJECTS = \
@@ -94,9 +94,9 @@ whisper.cpp/src/libwhisper.so.1.7.1: whisper.cpp/src/CMakeFiles/whisper.dir/whis
 whisper.cpp/src/libwhisper.so.1.7.1: whisper.cpp/src/CMakeFiles/whisper.dir/build.make
 whisper.cpp/src/libwhisper.so.1.7.1: whisper.cpp/ggml/src/libggml.so
 whisper.cpp/src/libwhisper.so.1.7.1: whisper.cpp/src/CMakeFiles/whisper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libwhisper.so"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/whisper.dir/link.txt --verbose=$(VERBOSE)
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src && $(CMAKE_COMMAND) -E cmake_symlink_library libwhisper.so.1.7.1 libwhisper.so.1 libwhisper.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libwhisper.so"
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/whisper.dir/link.txt --verbose=$(VERBOSE)
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src && $(CMAKE_COMMAND) -E cmake_symlink_library libwhisper.so.1.7.1 libwhisper.so.1 libwhisper.so
 
 whisper.cpp/src/libwhisper.so.1: whisper.cpp/src/libwhisper.so.1.7.1
 	@$(CMAKE_COMMAND) -E touch_nocreate whisper.cpp/src/libwhisper.so.1
@@ -109,10 +109,10 @@ whisper.cpp/src/CMakeFiles/whisper.dir/build: whisper.cpp/src/libwhisper.so
 .PHONY : whisper.cpp/src/CMakeFiles/whisper.dir/build
 
 whisper.cpp/src/CMakeFiles/whisper.dir/clean:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src && $(CMAKE_COMMAND) -P CMakeFiles/whisper.dir/cmake_clean.cmake
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src && $(CMAKE_COMMAND) -P CMakeFiles/whisper.dir/cmake_clean.cmake
 .PHONY : whisper.cpp/src/CMakeFiles/whisper.dir/clean
 
 whisper.cpp/src/CMakeFiles/whisper.dir/depend:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/src /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/src/CMakeFiles/whisper.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/src /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/src/CMakeFiles/whisper.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : whisper.cpp/src/CMakeFiles/whisper.dir/depend
 

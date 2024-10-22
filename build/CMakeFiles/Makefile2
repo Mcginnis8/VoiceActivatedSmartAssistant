@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant
+CMAKE_SOURCE_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build
+CMAKE_BINARY_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -65,18 +65,15 @@ CMAKE_BINARY_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceAct
 # The main recursive "all" target.
 all: CMakeFiles/SmartAssistant.dir/all
 all: whisper.cpp/all
-all: whisper.cpp/examples/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: whisper.cpp/preinstall
-preinstall: whisper.cpp/examples/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/SmartAssistant.dir/clean
 clean: whisper.cpp/clean
-clean: whisper.cpp/examples/clean
 .PHONY : clean
 
 #=============================================================================
@@ -96,92 +93,6 @@ whisper.cpp/preinstall: whisper.cpp/src/preinstall
 whisper.cpp/clean: whisper.cpp/ggml/clean
 whisper.cpp/clean: whisper.cpp/src/clean
 .PHONY : whisper.cpp/clean
-
-#=============================================================================
-# Directory level rules for directory whisper.cpp/examples
-
-# Recursive "all" directory target.
-whisper.cpp/examples/all: whisper.cpp/examples/CMakeFiles/common.dir/all
-whisper.cpp/examples/all: whisper.cpp/examples/main/all
-whisper.cpp/examples/all: whisper.cpp/examples/server/all
-whisper.cpp/examples/all: whisper.cpp/examples/bench/all
-whisper.cpp/examples/all: whisper.cpp/examples/quantize/all
-.PHONY : whisper.cpp/examples/all
-
-# Recursive "preinstall" directory target.
-whisper.cpp/examples/preinstall: whisper.cpp/examples/main/preinstall
-whisper.cpp/examples/preinstall: whisper.cpp/examples/server/preinstall
-whisper.cpp/examples/preinstall: whisper.cpp/examples/bench/preinstall
-whisper.cpp/examples/preinstall: whisper.cpp/examples/quantize/preinstall
-.PHONY : whisper.cpp/examples/preinstall
-
-# Recursive "clean" directory target.
-whisper.cpp/examples/clean: whisper.cpp/examples/CMakeFiles/common.dir/clean
-whisper.cpp/examples/clean: whisper.cpp/examples/main/clean
-whisper.cpp/examples/clean: whisper.cpp/examples/server/clean
-whisper.cpp/examples/clean: whisper.cpp/examples/bench/clean
-whisper.cpp/examples/clean: whisper.cpp/examples/quantize/clean
-.PHONY : whisper.cpp/examples/clean
-
-#=============================================================================
-# Directory level rules for directory whisper.cpp/examples/bench
-
-# Recursive "all" directory target.
-whisper.cpp/examples/bench/all: whisper.cpp/examples/bench/CMakeFiles/bench.dir/all
-.PHONY : whisper.cpp/examples/bench/all
-
-# Recursive "preinstall" directory target.
-whisper.cpp/examples/bench/preinstall:
-.PHONY : whisper.cpp/examples/bench/preinstall
-
-# Recursive "clean" directory target.
-whisper.cpp/examples/bench/clean: whisper.cpp/examples/bench/CMakeFiles/bench.dir/clean
-.PHONY : whisper.cpp/examples/bench/clean
-
-#=============================================================================
-# Directory level rules for directory whisper.cpp/examples/main
-
-# Recursive "all" directory target.
-whisper.cpp/examples/main/all: whisper.cpp/examples/main/CMakeFiles/main.dir/all
-.PHONY : whisper.cpp/examples/main/all
-
-# Recursive "preinstall" directory target.
-whisper.cpp/examples/main/preinstall:
-.PHONY : whisper.cpp/examples/main/preinstall
-
-# Recursive "clean" directory target.
-whisper.cpp/examples/main/clean: whisper.cpp/examples/main/CMakeFiles/main.dir/clean
-.PHONY : whisper.cpp/examples/main/clean
-
-#=============================================================================
-# Directory level rules for directory whisper.cpp/examples/quantize
-
-# Recursive "all" directory target.
-whisper.cpp/examples/quantize/all: whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/all
-.PHONY : whisper.cpp/examples/quantize/all
-
-# Recursive "preinstall" directory target.
-whisper.cpp/examples/quantize/preinstall:
-.PHONY : whisper.cpp/examples/quantize/preinstall
-
-# Recursive "clean" directory target.
-whisper.cpp/examples/quantize/clean: whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/clean
-.PHONY : whisper.cpp/examples/quantize/clean
-
-#=============================================================================
-# Directory level rules for directory whisper.cpp/examples/server
-
-# Recursive "all" directory target.
-whisper.cpp/examples/server/all: whisper.cpp/examples/server/CMakeFiles/server.dir/all
-.PHONY : whisper.cpp/examples/server/all
-
-# Recursive "preinstall" directory target.
-whisper.cpp/examples/server/preinstall:
-.PHONY : whisper.cpp/examples/server/preinstall
-
-# Recursive "clean" directory target.
-whisper.cpp/examples/server/clean: whisper.cpp/examples/server/CMakeFiles/server.dir/clean
-.PHONY : whisper.cpp/examples/server/clean
 
 #=============================================================================
 # Directory level rules for directory whisper.cpp/ggml
@@ -236,14 +147,14 @@ CMakeFiles/SmartAssistant.dir/all: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
 CMakeFiles/SmartAssistant.dir/all: whisper.cpp/src/CMakeFiles/whisper.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartAssistant.dir/build.make CMakeFiles/SmartAssistant.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target SmartAssistant"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=1,2 "Built target SmartAssistant"
 .PHONY : CMakeFiles/SmartAssistant.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SmartAssistant.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SmartAssistant.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 0
 .PHONY : CMakeFiles/SmartAssistant.dir/rule
 
 # Convenience name for target.
@@ -262,14 +173,14 @@ CMakeFiles/SmartAssistant.dir/clean:
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all:
 	$(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/depend
 	$(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=13,14,15,16,17,18 "Built target ggml"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target ggml"
 .PHONY : whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
 
 # Build rule for subdir invocation for target.
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 0
 .PHONY : whisper.cpp/ggml/src/CMakeFiles/ggml.dir/rule
 
 # Convenience name for target.
@@ -288,14 +199,14 @@ whisper.cpp/ggml/src/CMakeFiles/ggml.dir/clean:
 whisper.cpp/src/CMakeFiles/whisper.dir/all: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
 	$(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/depend
 	$(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=25,26 "Built target whisper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=9,10 "Built target whisper"
 .PHONY : whisper.cpp/src/CMakeFiles/whisper.dir/all
 
 # Build rule for subdir invocation for target.
 whisper.cpp/src/CMakeFiles/whisper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/src/CMakeFiles/whisper.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 0
 .PHONY : whisper.cpp/src/CMakeFiles/whisper.dir/rule
 
 # Convenience name for target.
@@ -306,144 +217,6 @@ whisper: whisper.cpp/src/CMakeFiles/whisper.dir/rule
 whisper.cpp/src/CMakeFiles/whisper.dir/clean:
 	$(MAKE) $(MAKESILENT) -f whisper.cpp/src/CMakeFiles/whisper.dir/build.make whisper.cpp/src/CMakeFiles/whisper.dir/clean
 .PHONY : whisper.cpp/src/CMakeFiles/whisper.dir/clean
-
-#=============================================================================
-# Target rules for target whisper.cpp/examples/CMakeFiles/common.dir
-
-# All Build rule for target.
-whisper.cpp/examples/CMakeFiles/common.dir/all: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
-whisper.cpp/examples/CMakeFiles/common.dir/all: whisper.cpp/src/CMakeFiles/whisper.dir/all
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/CMakeFiles/common.dir/build.make whisper.cpp/examples/CMakeFiles/common.dir/depend
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/CMakeFiles/common.dir/build.make whisper.cpp/examples/CMakeFiles/common.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=9,10,11,12 "Built target common"
-.PHONY : whisper.cpp/examples/CMakeFiles/common.dir/all
-
-# Build rule for subdir invocation for target.
-whisper.cpp/examples/CMakeFiles/common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/examples/CMakeFiles/common.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
-.PHONY : whisper.cpp/examples/CMakeFiles/common.dir/rule
-
-# Convenience name for target.
-common: whisper.cpp/examples/CMakeFiles/common.dir/rule
-.PHONY : common
-
-# clean rule for target.
-whisper.cpp/examples/CMakeFiles/common.dir/clean:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/CMakeFiles/common.dir/build.make whisper.cpp/examples/CMakeFiles/common.dir/clean
-.PHONY : whisper.cpp/examples/CMakeFiles/common.dir/clean
-
-#=============================================================================
-# Target rules for target whisper.cpp/examples/main/CMakeFiles/main.dir
-
-# All Build rule for target.
-whisper.cpp/examples/main/CMakeFiles/main.dir/all: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
-whisper.cpp/examples/main/CMakeFiles/main.dir/all: whisper.cpp/src/CMakeFiles/whisper.dir/all
-whisper.cpp/examples/main/CMakeFiles/main.dir/all: whisper.cpp/examples/CMakeFiles/common.dir/all
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/main/CMakeFiles/main.dir/build.make whisper.cpp/examples/main/CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/main/CMakeFiles/main.dir/build.make whisper.cpp/examples/main/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=19,20 "Built target main"
-.PHONY : whisper.cpp/examples/main/CMakeFiles/main.dir/all
-
-# Build rule for subdir invocation for target.
-whisper.cpp/examples/main/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/examples/main/CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
-.PHONY : whisper.cpp/examples/main/CMakeFiles/main.dir/rule
-
-# Convenience name for target.
-main: whisper.cpp/examples/main/CMakeFiles/main.dir/rule
-.PHONY : main
-
-# clean rule for target.
-whisper.cpp/examples/main/CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/main/CMakeFiles/main.dir/build.make whisper.cpp/examples/main/CMakeFiles/main.dir/clean
-.PHONY : whisper.cpp/examples/main/CMakeFiles/main.dir/clean
-
-#=============================================================================
-# Target rules for target whisper.cpp/examples/server/CMakeFiles/server.dir
-
-# All Build rule for target.
-whisper.cpp/examples/server/CMakeFiles/server.dir/all: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
-whisper.cpp/examples/server/CMakeFiles/server.dir/all: whisper.cpp/src/CMakeFiles/whisper.dir/all
-whisper.cpp/examples/server/CMakeFiles/server.dir/all: whisper.cpp/examples/CMakeFiles/common.dir/all
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/server/CMakeFiles/server.dir/build.make whisper.cpp/examples/server/CMakeFiles/server.dir/depend
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/server/CMakeFiles/server.dir/build.make whisper.cpp/examples/server/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=23,24 "Built target server"
-.PHONY : whisper.cpp/examples/server/CMakeFiles/server.dir/all
-
-# Build rule for subdir invocation for target.
-whisper.cpp/examples/server/CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/examples/server/CMakeFiles/server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
-.PHONY : whisper.cpp/examples/server/CMakeFiles/server.dir/rule
-
-# Convenience name for target.
-server: whisper.cpp/examples/server/CMakeFiles/server.dir/rule
-.PHONY : server
-
-# clean rule for target.
-whisper.cpp/examples/server/CMakeFiles/server.dir/clean:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/server/CMakeFiles/server.dir/build.make whisper.cpp/examples/server/CMakeFiles/server.dir/clean
-.PHONY : whisper.cpp/examples/server/CMakeFiles/server.dir/clean
-
-#=============================================================================
-# Target rules for target whisper.cpp/examples/bench/CMakeFiles/bench.dir
-
-# All Build rule for target.
-whisper.cpp/examples/bench/CMakeFiles/bench.dir/all: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
-whisper.cpp/examples/bench/CMakeFiles/bench.dir/all: whisper.cpp/src/CMakeFiles/whisper.dir/all
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/bench/CMakeFiles/bench.dir/build.make whisper.cpp/examples/bench/CMakeFiles/bench.dir/depend
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/bench/CMakeFiles/bench.dir/build.make whisper.cpp/examples/bench/CMakeFiles/bench.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=7,8 "Built target bench"
-.PHONY : whisper.cpp/examples/bench/CMakeFiles/bench.dir/all
-
-# Build rule for subdir invocation for target.
-whisper.cpp/examples/bench/CMakeFiles/bench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/examples/bench/CMakeFiles/bench.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
-.PHONY : whisper.cpp/examples/bench/CMakeFiles/bench.dir/rule
-
-# Convenience name for target.
-bench: whisper.cpp/examples/bench/CMakeFiles/bench.dir/rule
-.PHONY : bench
-
-# clean rule for target.
-whisper.cpp/examples/bench/CMakeFiles/bench.dir/clean:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/bench/CMakeFiles/bench.dir/build.make whisper.cpp/examples/bench/CMakeFiles/bench.dir/clean
-.PHONY : whisper.cpp/examples/bench/CMakeFiles/bench.dir/clean
-
-#=============================================================================
-# Target rules for target whisper.cpp/examples/quantize/CMakeFiles/quantize.dir
-
-# All Build rule for target.
-whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/all: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/all
-whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/all: whisper.cpp/src/CMakeFiles/whisper.dir/all
-whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/all: whisper.cpp/examples/CMakeFiles/common.dir/all
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/build.make whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/depend
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/build.make whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=21,22 "Built target quantize"
-.PHONY : whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/all
-
-# Build rule for subdir invocation for target.
-whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
-.PHONY : whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/rule
-
-# Convenience name for target.
-quantize: whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/rule
-.PHONY : quantize
-
-# clean rule for target.
-whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/clean:
-	$(MAKE) $(MAKESILENT) -f whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/build.make whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/clean
-.PHONY : whisper.cpp/examples/quantize/CMakeFiles/quantize.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

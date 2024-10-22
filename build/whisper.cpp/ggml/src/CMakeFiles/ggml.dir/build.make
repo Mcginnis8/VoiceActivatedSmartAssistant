@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant
+CMAKE_SOURCE_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build
+CMAKE_BINARY_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build
 
 # Include any dependencies generated for this target.
 include whisper.cpp/ggml/src/CMakeFiles/ggml.dir/depend.make
@@ -72,72 +72,72 @@ include whisper.cpp/ggml/src/CMakeFiles/ggml.dir/flags.make
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/flags.make
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o: ../whisper.cpp/ggml/src/ggml.c
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o -MF CMakeFiles/ggml.dir/ggml.c.o.d -o CMakeFiles/ggml.dir/ggml.c.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o"
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o -MF CMakeFiles/ggml.dir/ggml.c.o.d -o CMakeFiles/ggml.dir/ggml.c.o -c /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml.c
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ggml.dir/ggml.c.i"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml.c > CMakeFiles/ggml.dir/ggml.c.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml.c > CMakeFiles/ggml.dir/ggml.c.i
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ggml.dir/ggml.c.s"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml.c -o CMakeFiles/ggml.dir/ggml.c.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml.c -o CMakeFiles/ggml.dir/ggml.c.s
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/flags.make
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o: ../whisper.cpp/ggml/src/ggml-alloc.c
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o -MF CMakeFiles/ggml.dir/ggml-alloc.c.o.d -o CMakeFiles/ggml.dir/ggml-alloc.c.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-alloc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o"
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o -MF CMakeFiles/ggml.dir/ggml-alloc.c.o.d -o CMakeFiles/ggml.dir/ggml-alloc.c.o -c /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-alloc.c
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ggml.dir/ggml-alloc.c.i"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-alloc.c > CMakeFiles/ggml.dir/ggml-alloc.c.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-alloc.c > CMakeFiles/ggml.dir/ggml-alloc.c.i
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ggml.dir/ggml-alloc.c.s"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-alloc.c -o CMakeFiles/ggml.dir/ggml-alloc.c.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-alloc.c -o CMakeFiles/ggml.dir/ggml-alloc.c.s
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/flags.make
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o: ../whisper.cpp/ggml/src/ggml-backend.cpp
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o -MF CMakeFiles/ggml.dir/ggml-backend.cpp.o.d -o CMakeFiles/ggml.dir/ggml-backend.cpp.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-backend.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o"
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o -MF CMakeFiles/ggml.dir/ggml-backend.cpp.o.d -o CMakeFiles/ggml.dir/ggml-backend.cpp.o -c /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-backend.cpp
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ggml.dir/ggml-backend.cpp.i"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-backend.cpp > CMakeFiles/ggml.dir/ggml-backend.cpp.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-backend.cpp > CMakeFiles/ggml.dir/ggml-backend.cpp.i
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ggml.dir/ggml-backend.cpp.s"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-backend.cpp -o CMakeFiles/ggml.dir/ggml-backend.cpp.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-backend.cpp -o CMakeFiles/ggml.dir/ggml-backend.cpp.s
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/flags.make
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o: ../whisper.cpp/ggml/src/ggml-quants.c
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o -MF CMakeFiles/ggml.dir/ggml-quants.c.o.d -o CMakeFiles/ggml.dir/ggml-quants.c.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-quants.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o"
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o -MF CMakeFiles/ggml.dir/ggml-quants.c.o.d -o CMakeFiles/ggml.dir/ggml-quants.c.o -c /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-quants.c
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ggml.dir/ggml-quants.c.i"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-quants.c > CMakeFiles/ggml.dir/ggml-quants.c.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-quants.c > CMakeFiles/ggml.dir/ggml-quants.c.i
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ggml.dir/ggml-quants.c.s"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-quants.c -o CMakeFiles/ggml.dir/ggml-quants.c.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-quants.c -o CMakeFiles/ggml.dir/ggml-quants.c.s
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/flags.make
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o: ../whisper.cpp/ggml/src/ggml-aarch64.c
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o -MF CMakeFiles/ggml.dir/ggml-aarch64.c.o.d -o CMakeFiles/ggml.dir/ggml-aarch64.c.o -c /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-aarch64.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o"
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o -MF CMakeFiles/ggml.dir/ggml-aarch64.c.o.d -o CMakeFiles/ggml.dir/ggml-aarch64.c.o -c /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-aarch64.c
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ggml.dir/ggml-aarch64.c.i"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-aarch64.c > CMakeFiles/ggml.dir/ggml-aarch64.c.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-aarch64.c > CMakeFiles/ggml.dir/ggml-aarch64.c.i
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ggml.dir/ggml-aarch64.c.s"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-aarch64.c -o CMakeFiles/ggml.dir/ggml-aarch64.c.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src/ggml-aarch64.c -o CMakeFiles/ggml.dir/ggml-aarch64.c.s
 
 # Object files for target ggml
 ggml_OBJECTS = \
@@ -159,18 +159,18 @@ whisper.cpp/ggml/src/libggml.so: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.
 whisper.cpp/ggml/src/libggml.so: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
 whisper.cpp/ggml/src/libggml.so: /usr/lib/x86_64-linux-gnu/libpthread.a
 whisper.cpp/ggml/src/libggml.so: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libggml.so"
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ggml.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libggml.so"
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ggml.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build: whisper.cpp/ggml/src/libggml.so
 .PHONY : whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/clean:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && $(CMAKE_COMMAND) -P CMakeFiles/ggml.dir/cmake_clean.cmake
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src && $(CMAKE_COMMAND) -P CMakeFiles/ggml.dir/cmake_clean.cmake
 .PHONY : whisper.cpp/ggml/src/CMakeFiles/ggml.dir/clean
 
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/depend:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src/CMakeFiles/ggml.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/whisper.cpp/ggml/src /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src/CMakeFiles/ggml.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : whisper.cpp/ggml/src/CMakeFiles/ggml.dir/depend
 

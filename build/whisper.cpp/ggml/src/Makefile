@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant
+CMAKE_SOURCE_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build
+CMAKE_BINARY_DIR = /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src//CMakeFiles/progress.marks
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/CMakeFiles 0
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src//CMakeFiles/progress.marks
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/clean
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/preinstall
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/preinstall
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/rule:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/rule
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper.cpp/ggml/src/CMakeFiles/ggml.dir/rule
 .PHONY : whisper.cpp/ggml/src/CMakeFiles/ggml.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ ggml: whisper.cpp/ggml/src/CMakeFiles/ggml.dir/rule
 
 # fast build rule for target.
 ggml/fast:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build
 .PHONY : ggml/fast
 
 ggml-aarch64.o: ggml-aarch64.c.o
@@ -180,7 +180,7 @@ ggml-aarch64.o: ggml-aarch64.c.o
 
 # target to build an object file
 ggml-aarch64.c.o:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.o
 .PHONY : ggml-aarch64.c.o
 
 ggml-aarch64.i: ggml-aarch64.c.i
@@ -188,7 +188,7 @@ ggml-aarch64.i: ggml-aarch64.c.i
 
 # target to preprocess a source file
 ggml-aarch64.c.i:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.i
 .PHONY : ggml-aarch64.c.i
 
 ggml-aarch64.s: ggml-aarch64.c.s
@@ -196,7 +196,7 @@ ggml-aarch64.s: ggml-aarch64.c.s
 
 # target to generate assembly for a file
 ggml-aarch64.c.s:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-aarch64.c.s
 .PHONY : ggml-aarch64.c.s
 
 ggml-alloc.o: ggml-alloc.c.o
@@ -204,7 +204,7 @@ ggml-alloc.o: ggml-alloc.c.o
 
 # target to build an object file
 ggml-alloc.c.o:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.o
 .PHONY : ggml-alloc.c.o
 
 ggml-alloc.i: ggml-alloc.c.i
@@ -212,7 +212,7 @@ ggml-alloc.i: ggml-alloc.c.i
 
 # target to preprocess a source file
 ggml-alloc.c.i:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.i
 .PHONY : ggml-alloc.c.i
 
 ggml-alloc.s: ggml-alloc.c.s
@@ -220,7 +220,7 @@ ggml-alloc.s: ggml-alloc.c.s
 
 # target to generate assembly for a file
 ggml-alloc.c.s:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-alloc.c.s
 .PHONY : ggml-alloc.c.s
 
 ggml-backend.o: ggml-backend.cpp.o
@@ -228,7 +228,7 @@ ggml-backend.o: ggml-backend.cpp.o
 
 # target to build an object file
 ggml-backend.cpp.o:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.o
 .PHONY : ggml-backend.cpp.o
 
 ggml-backend.i: ggml-backend.cpp.i
@@ -236,7 +236,7 @@ ggml-backend.i: ggml-backend.cpp.i
 
 # target to preprocess a source file
 ggml-backend.cpp.i:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.i
 .PHONY : ggml-backend.cpp.i
 
 ggml-backend.s: ggml-backend.cpp.s
@@ -244,7 +244,7 @@ ggml-backend.s: ggml-backend.cpp.s
 
 # target to generate assembly for a file
 ggml-backend.cpp.s:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-backend.cpp.s
 .PHONY : ggml-backend.cpp.s
 
 ggml-quants.o: ggml-quants.c.o
@@ -252,7 +252,7 @@ ggml-quants.o: ggml-quants.c.o
 
 # target to build an object file
 ggml-quants.c.o:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.o
 .PHONY : ggml-quants.c.o
 
 ggml-quants.i: ggml-quants.c.i
@@ -260,7 +260,7 @@ ggml-quants.i: ggml-quants.c.i
 
 # target to preprocess a source file
 ggml-quants.c.i:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.i
 .PHONY : ggml-quants.c.i
 
 ggml-quants.s: ggml-quants.c.s
@@ -268,7 +268,7 @@ ggml-quants.s: ggml-quants.c.s
 
 # target to generate assembly for a file
 ggml-quants.c.s:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml-quants.c.s
 .PHONY : ggml-quants.c.s
 
 ggml.o: ggml.c.o
@@ -276,7 +276,7 @@ ggml.o: ggml.c.o
 
 # target to build an object file
 ggml.c.o:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.o
 .PHONY : ggml.c.o
 
 ggml.i: ggml.c.i
@@ -284,7 +284,7 @@ ggml.i: ggml.c.i
 
 # target to preprocess a source file
 ggml.c.i:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.i
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.i
 .PHONY : ggml.c.i
 
 ggml.s: ggml.c.s
@@ -292,7 +292,7 @@ ggml.s: ggml.c.s
 
 # target to generate assembly for a file
 ggml.c.s:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.s
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(MAKE) $(MAKESILENT) -f whisper.cpp/ggml/src/CMakeFiles/ggml.dir/build.make whisper.cpp/ggml/src/CMakeFiles/ggml.dir/ggml.c.s
 .PHONY : ggml.c.s
 
 # Help Target
@@ -334,6 +334,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/camvo/OneDrive/PreviousDocuments/ECE4122/FinalProjLaptop/VoiceActivatedSmartAssistant/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
