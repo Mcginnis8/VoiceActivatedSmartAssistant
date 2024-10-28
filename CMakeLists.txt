@@ -13,7 +13,7 @@ add_subdirectory(whisper.cpp)
 link_directories(/opt/homebrew/lib)
 
 # Add source files
-file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/listener.cpp)
+file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/listener.cpp ${PROJECT_SOURCE_DIR}/functionality.cpp)
 
 # Add the executable
 add_executable(SmartAssistant ${SOURCES})
