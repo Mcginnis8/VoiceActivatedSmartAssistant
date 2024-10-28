@@ -17,6 +17,15 @@ void Functionality::sayHello() {
     std::cout << "Hello!" << std::endl;
 }
 
+void Functionality::openGoogle() {
+     system("open -a \"Google Chrome\" https://www.google.com/");
+}
+
+void Functionality::openGoogle() {
+     system("nsnake");
+}
+
+
 void Functionality::executeCommand(int command) {
     switch (command) {
         case 0:
@@ -28,12 +37,11 @@ void Functionality::executeCommand(int command) {
         case 2:
             openGoogle();
             break;
+        case 3:
+            openGoogle();
+            break;
         default:
             std::cout << "Unknown command" << std::endl;
             break;
     }
-}
-
-void Functionality::openGoogle() {
-     system("open -a \"Google Chrome\" https://www.google.com/");
 }
