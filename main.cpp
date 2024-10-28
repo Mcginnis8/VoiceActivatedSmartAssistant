@@ -13,6 +13,7 @@ int main(int argc, char **argv) {
     std::cout << "Press 'l' to start listening..." << std::endl;
 
     while (true) {
+        Functionality functionality;
         char ch = std::cin.get();
         if (ch == 'l' || ch == 'L') {
             std::cout << "Listening..." << std::endl;
@@ -21,7 +22,7 @@ int main(int argc, char **argv) {
             int predict = Listener::start_main_listen();
             
             // from functionality.cpp
-            executeCommand(predict);
+            functionality.executeCommand(predict);
             
             std::cout << "Press 'l' to start listening again..." << std::endl;
         }
