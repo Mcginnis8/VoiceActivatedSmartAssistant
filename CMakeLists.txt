@@ -13,10 +13,7 @@ add_subdirectory(whisper.cpp)
 link_directories(/opt/homebrew/lib)
 
 # Add source files
-file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/main.cpp)
-
-# Find PortAudio
-find_package(PkgConfig REQUIRED)
+file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/listener.cpp)
 
 # Add the executable
 add_executable(SmartAssistant ${SOURCES})
