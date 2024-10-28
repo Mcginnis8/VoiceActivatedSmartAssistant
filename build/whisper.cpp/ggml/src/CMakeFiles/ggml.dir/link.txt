@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libggml.so -o libggml.so CMakeFiles/ggml.dir/ggml.c.o CMakeFiles/ggml.dir/ggml-alloc.c.o CMakeFiles/ggml.dir/ggml-backend.cpp.o CMakeFiles/ggml.dir/ggml-quants.c.o CMakeFiles/ggml.dir/ggml-aarch64.c.o  -lm /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 
