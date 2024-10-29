@@ -18,11 +18,15 @@ void Functionality::sayHello() {
 }
 
 void Functionality::openGoogle() {
-     system("open -a \"Google Chrome\" https://www.google.com/");
+    system("open -a \"Google Chrome\" https://www.google.com/");
 }
 
-void Functionality::openGoogle() {
-     system("nsnake");
+void Functionality::snake() { //Maybe remove this later
+    system("open -a \"Google Chrome\" https://snakegame.org");
+}
+
+void Functionality::canvas() {
+    system("open -a \"Google Chrome\" https://gatech.instructure.com/courses/");
 }
 
 
@@ -38,7 +42,10 @@ void Functionality::executeCommand(int command) {
             openGoogle();
             break;
         case 3:
-            openGoogle();
+            snake();
+            break;
+        case 4:
+            canvas();
             break;
         default:
             std::cout << "Unknown command" << std::endl;
