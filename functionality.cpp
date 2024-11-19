@@ -13,6 +13,22 @@ void Functionality::setTenSecondTimer() {
     std::cout << "Time's up!" << std::endl;
 }
 
+void Functionality::setSixtySecondTimer() {
+    for (int i = 60; i > 0; i--) {
+        std::cout << i << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    std::cout << "Time's up!" << std::endl;
+}
+
+void Functionality::setOneMinuteTimer() {
+    for (int i = 60; i > 0; i--) {
+        std::cout << i << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    std::cout << "Time's up!" << std::endl;
+}
+
 void Functionality::sayHello() {
     std::cout << "Hello!" << std::endl;
 }
@@ -29,6 +45,10 @@ void Functionality::canvas() {
     system("open -a \"Google Chrome\" https://gatech.instructure.com/courses/");
 }
 
+void Functionality::openYoutube() {
+    system("open -a \"Google Chrome\" https://www.youtube.com/");
+}
+
 
 void Functionality::executeCommand(int command) {
     switch (command) {
@@ -36,16 +56,25 @@ void Functionality::executeCommand(int command) {
             setTenSecondTimer();
             break;
         case 1:
-            sayHello();
+            setSixtySecondTimer();
             break;
         case 2:
-            openGoogle();
+            setOneMinuteTimer();
             break;
         case 3:
-            snake();
+            sayHello();
             break;
         case 4:
+            openGoogle();
+            break;
+        case 5:
+            snake();
+            break;
+        case 6:
             canvas();
+            break;
+        case 7:
+            openYoutube();
             break;
         default:
             std::cout << "Unknown command" << std::endl;
