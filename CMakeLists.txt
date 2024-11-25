@@ -21,7 +21,7 @@ link_directories(${PROJECT_SOURCE_DIR}/../SFML/lib)
 link_directories(/opt/homebrew/lib)
 
 # Add source files
-file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/listener.cpp ${PROJECT_SOURCE_DIR}/functionality.cpp)
+file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/listener.cpp ${PROJECT_SOURCE_DIR}/functionality.cpp ${PROJECT_SOURCE_DIR}/jokes.txt)
 
 # Add the executable
 add_executable(SmartAssistant ${SOURCES})

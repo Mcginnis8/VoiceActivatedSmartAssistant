@@ -2,8 +2,38 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <fstream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
 
-Functionality::Functionality() {}
+Functionality::Functionality() {
+    // Initialize random seed
+    std::srand(std::time(nullptr));
+}
+
+void Functionality::tellJoke() {
+    std::ifstream file("jokes.txt");
+    if (!file.is_open()) {
+        std::cout << "Error opening jokes.txt" << std::endl;
+        return;
+    }
+
+    std::vector<std::string> jokes;
+    std::string line;
+    while (std::getline(file, line)) {
+        jokes.push_back(line);
+    }
+    file.close();
+
+    if (jokes.empty()) {
+        std::cout << "No jokes found." << std::endl;
+        return;
+    }
+
+    int index = std::rand() % jokes.size();
+    std::cout << jokes[index] << std::endl;
+}
 
 void Functionality::setTenSecondTimer() {
     for (int i = 10; i > 0; i--) {
@@ -75,6 +105,9 @@ void Functionality::executeCommand(int command) {
             break;
         case 7:
             openYoutube();
+            break;
+        case 8:
+            tellJoke();
             break;
         default:
             std::cout << "Unknown command" << std::endl;
