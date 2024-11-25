@@ -2,6 +2,10 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <fstream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
 
 Functionality::Functionality() {
     // Initialize random seed

@@ -4,15 +4,16 @@
 class Functionality {
 public:
     Functionality();
+    void tellJoke();
     void setTenSecondTimer();
     void setSixtySecondTimer();
     void setOneMinuteTimer();
     void sayHello();
-    void executeCommand(int command);
     void openGoogle();
     void snake();
     void canvas();
     void openYoutube();
+    void executeCommand(int command);
 };
 
 #endif
