@@ -34,7 +34,7 @@ int Listener::start_main_listen() {
     std::this_thread::sleep_for(std::chrono::seconds(3));
     system("../whisper.cpp/main -m ../whisper.cpp/models/ggml-tiny.en.bin -f test.wav -otxt");
     std::vector<std::string> targets = {"Set a 10 second timer", "Set a 60 second timer", "Set a 1 minute timer",
-            "Say Hello", "Open Google", "Play Snake", "Open Canvas", "Open Youtube"};
+            "Say Hello", "Open Google", "Play Snake", "Open Canvas", "Open Youtube", "Tell me a joke"};
     std::vector<std::string> closestMatches(targets.size());
     std::vector<int> minDistances(targets.size(), 9999999);
 
