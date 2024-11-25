@@ -9,14 +9,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Include the whisper.cpp project
 add_subdirectory(whisper.cpp)
-# add_subdirectory(SFML)
+add_subdirectory(SFML)
 
 # Include directories for SFML
-# include_directories(${PROJECT_SOURCE_DIR}/../SFML/include)
+include_directories(${PROJECT_SOURCE_DIR}/../SFML/include)
 
 
 # Link directories for SFML
-# link_directories(${PROJECT_SOURCE_DIR}/../SFML/lib)
+link_directories(${PROJECT_SOURCE_DIR}/../SFML/lib)
 
 link_directories(/opt/homebrew/lib)
 
