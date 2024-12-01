@@ -6,9 +6,12 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
+#include <sstream>
 #include "config.h"
 #include <string>
 #include <curl/curl.h>
+#include "main.h"
 
 static size_t writeCallback(void* contents, size_t size, size_t nmemb, std::string* userp) {
     userp->append((char*)contents, size * nmemb);
@@ -25,6 +28,7 @@ void Functionality::tellJoke() {
     std::ifstream file("jokes.txt");
     if (!file.is_open()) {
         std::cout << "Error opening jokes.txt" << std::endl;
+        updateSFMLText("Error opening jokes.txt");
         return;
     }
 
@@ -37,6 +41,7 @@ void Functionality::tellJoke() {
 
     if (jokes.empty()) {
         std::cout << "No jokes found." << std::endl;
+        updateSFMLText("No jokes found.");
         return;
     }
 
@@ -47,14 +52,17 @@ void Functionality::tellJoke() {
 void Functionality::setTenSecondTimer() {
     for (int i = 10; i > 0; i--) {
         std::cout << i << std::endl;
+        updateSFMLText(std::to_string(i));
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
     std::cout << "Time's up!" << std::endl;
+    updateSFMLText("Time's up!");
 }
 
 void Functionality::setSixtySecondTimer() {
     for (int i = 60; i > 0; i--) {
         std::cout << i << std::endl;
+        updateSFMLText(std::to_string(i));
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
     std::cout << "Time's up!" << std::endl;
@@ -63,17 +71,21 @@ void Functionality::setSixtySecondTimer() {
 void Functionality::setOneMinuteTimer() {
     for (int i = 60; i > 0; i--) {
         std::cout << i << std::endl;
+        updateSFMLText(std::to_string(i));
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
+    updateSFMLText("Time's up!");
     std::cout << "Time's up!" << std::endl;
 }
 
 void Functionality::sayHello() {
     std::cout << "Hello!" << std::endl;
+    updateSFMLText("Hello!");
 }
 
 void Functionality::openGoogle() {
     system("open -a \"Google Chrome\" https://www.google.com/");
+    updateSFMLText("Opened Google");
 }
 
 void Functionality::snake() { //Maybe remove this later
@@ -82,10 +94,12 @@ void Functionality::snake() { //Maybe remove this later
 
 void Functionality::canvas() {
     system("open -a \"Google Chrome\" https://gatech.instructure.com/courses/");
+    updateSFMLText("Opened Canvas");
 }
 
 void Functionality::openYoutube() {
     system("open -a \"Google Chrome\" https://www.youtube.com/");
+    updateSFMLText("Opened Youtube");
 }
 
 void Functionality::weatherAtlanta() {
@@ -95,6 +109,7 @@ void Functionality::weatherAtlanta() {
     FILE* pipe = popen(command.c_str(), "r");
     if (!pipe) {
         std::cout << "Failed to get weather data." << std::endl;
+        updateSFMLText("Failed to get weather data.");
         return;
     }
     while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
@@ -134,11 +149,16 @@ void Functionality::weatherAtlanta() {
     double tempF = (tempC * 9/5) + 32;
     double windMPH = windKPH * 0.621371;
 
-    // Create informative paragraph
-    std::cout << "Weather in " << location << ", " << region << ": " << condition << ". "
-              << "Temperature is " << tempC << "°C (" << tempF << "°F) with a wind speed of " 
-              << windKPH << " kph (" << windMPH << " mph) and humidity of " << humidity << "%." 
-              << std::endl;
+    // Create informative paragraph with 2 decimal places
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(2);
+    oss << "Weather in " << location << ", " << region << ": " << condition << ". "
+        << "Temperature is " << tempC << "°C (" << tempF << "°F) \nwith a wind speed of " 
+        << windKPH << " kph (" << windMPH << " mph) \nand humidity of " << humidity << "%.";
+
+    std::string output = oss.str();
+    std::cout << output << std::endl;
+    updateSFMLText(output);
 }
 
 
@@ -176,6 +196,7 @@ void Functionality::executeCommand(int command) {
             break;
         default:
             std::cout << "Unknown command" << std::endl;
+            updateSFMLText("Unknown command");
             break;
     }
 }

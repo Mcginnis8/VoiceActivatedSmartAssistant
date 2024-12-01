@@ -16,14 +16,11 @@ find_package(SFML 2.5 COMPONENTS graphics system window REQUIRED)
 # Find CURL
 find_package(CURL REQUIRED)
 
-# include_directories(${SFML_INCLUDE_DIR})
-
 # Add source files
 file(GLOB SOURCES 
     ${PROJECT_SOURCE_DIR}/main.cpp 
     ${PROJECT_SOURCE_DIR}/listener.cpp 
     ${PROJECT_SOURCE_DIR}/functionality.cpp 
-    ${PROJECT_SOURCE_DIR}/jokes.txt
 )
 
 # Add the executable
@@ -37,4 +34,11 @@ target_link_libraries(SmartAssistant
         sfml-window 
         CURL::libcurl 
         whisper
+)
+
+# Copy font file to the build directory
+add_custom_command(TARGET SmartAssistant POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PROJECT_SOURCE_DIR}/fonts/KOMIKAP_.ttf
+        $<TARGET_FILE_DIR:SmartAssistant>/fonts/KOMIKAP_.ttf
 )
