@@ -10,6 +10,12 @@
 #include <string>
 #include <curl/curl.h>
 
+static size_t writeCallback(void* contents, size_t size, size_t nmemb, std::string* userp) {
+    userp->append((char*)contents, size * nmemb);
+    return size * nmemb;
+}
+
+
 Functionality::Functionality() {
     // Initialize random seed
     std::srand(std::time(nullptr));
