@@ -126,6 +126,9 @@ void Functionality::executeCommand(int command) {
         case 8:
             tellJoke();
             break;
+        case 9:
+            weatherAtlanta();
+            break;
         default:
             std::cout << "Unknown command" << std::endl;
             break;
