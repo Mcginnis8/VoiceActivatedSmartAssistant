@@ -1,4 +1,5 @@
 #include "listener.h"
+#include "main.h"
 #include <vector>
 #include <algorithm>
 #include <chrono>
@@ -32,20 +33,22 @@ int Listener::levenshteinDistance(const std::string &s1, const std::string &s2) 
 int Listener::start_main_listen() {
     bool debug = true;
     int closestTargetIndex;
+    std::string textForDisplay;
     std::vector<std::string> targets = {"Set a 10 second timer", "Set a 60 second timer", "Set a 1 minute timer",
                 "Say Hello", "Open Google", "Play Snake", "Open Canvas", "Open Youtube", "Tell me a joke", "What's the weather in Atlanta?"};
 
 
     if (debug) {
+        std::cout << "DEBUG MODE FOR WINDOWS, if you are AKI, SET DEBUG TO FALSE IN LISTENER.CPP\n";
         std::cout << "Enter the number corresponding to the target you want:\n";
+        textForDisplay = "DEBUG MODE FOR WINDOWS\nIf you are AKI, SET DEBUG TO FALSE IN LISTENER.CPP\nEnter the number for the target you want IN THE CONSOLE\n";
         for (int i = 0; i < targets.size(); i++) {
             std::cout << i << ": " << targets[i] << "\n";
+            textForDisplay += std::to_string(i) + ": " + targets[i] + "\n";
         }
+        updateSFMLText(textForDisplay);
         std::cin >> closestTargetIndex;
-    }
-
-
-    else {
+    } else {
         system("sox -d -r 16000 -c 1 -b 16 test.wav trim 0 3");
         std::this_thread::sleep_for(std::chrono::seconds(3));
         system("../whisper.cpp/main -m ../whisper.cpp/models/ggml-tiny.en.bin -f test.wav -otxt");
@@ -68,6 +71,7 @@ int Listener::start_main_listen() {
             file.close();
         } else {
             std::cout << "Unable to open file";
+            updateSFMLText("Unable to open file");
         }
 
         closestTargetIndex = 0;
@@ -79,5 +83,4 @@ int Listener::start_main_listen() {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
     return closestTargetIndex;
-    
 }
