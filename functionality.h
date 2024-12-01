@@ -13,6 +13,7 @@ public:
     void snake();
     void canvas();
     void openYoutube();
+    void weatherAtlanta();
     void executeCommand(int command);
 };
 

@@ -6,6 +6,9 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include "config.h"
+#include <string>
+#include <curl/curl.h>
 
 Functionality::Functionality() {
     // Initialize random seed
@@ -77,6 +80,20 @@ void Functionality::canvas() {
 
 void Functionality::openYoutube() {
     system("open -a \"Google Chrome\" https://www.youtube.com/");
+}
+
+void Functionality::weatherAtlanta() {
+    CURL *curl;
+    CURLcode res;
+    std::string response;
+    if ((curl = curl_easy_init()) != nullptr) {
+        curl_easy_setopt(curl, CURLOPT_URL, "https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466&apikey=" + WEATHER_API_KEY);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
+        res = curl_easy_perform(curl);
+        curl_easy_cleanup(curl);
+    }
+    std::cout << response << std::endl;
 }
 
 
