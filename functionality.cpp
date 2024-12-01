@@ -89,17 +89,56 @@ void Functionality::openYoutube() {
 }
 
 void Functionality::weatherAtlanta() {
-    CURL *curl;
-    CURLcode res;
-    std::string response;
-    if ((curl = curl_easy_init()) != nullptr) {
-        curl_easy_setopt(curl, CURLOPT_URL, "https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466&apikey=" + WEATHER_API_KEY);
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
-        res = curl_easy_perform(curl);
-        curl_easy_cleanup(curl);
+    std::string command = "curl -s \"https://api.weatherapi.com/v1/current.json?q=30308&key=" + WEATHER_API_KEY + "\"";
+    std::string response = "";
+    char buffer[128];
+    FILE* pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+        std::cout << "Failed to get weather data." << std::endl;
+        return;
     }
-    std::cout << response << std::endl;
+    while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
+        response += buffer;
+    }
+    pclose(pipe);
+
+    // Manual JSON parsing
+    std::string location, region, condition;
+    double tempC, windKPH;
+    int humidity;
+
+    // Helper lambda to extract value by key
+    auto extract = [&](const std::string& key) -> std::string {
+        size_t pos = response.find("\"" + key + "\":");
+        if (pos == std::string::npos) return "";
+        pos += key.length() + 3;
+        size_t end;
+        if (response[pos] == '\"') {
+            pos++;
+            end = response.find("\"", pos);
+            return response.substr(pos, end - pos);
+        } else {
+            end = response.find(",", pos);
+            return response.substr(pos, end - pos);
+        }
+    };
+
+    location = extract("name");
+    region = extract("region");
+    condition = extract("text");
+    tempC = std::stod(extract("temp_c"));
+    windKPH = std::stod(extract("wind_kph"));
+    humidity = std::stoi(extract("humidity"));
+
+    // Convert temperature to Fahrenheit and wind speed to MPH
+    double tempF = (tempC * 9/5) + 32;
+    double windMPH = windKPH * 0.621371;
+
+    // Create informative paragraph
+    std::cout << "Weather in " << location << ", " << region << ": " << condition << ". "
+              << "Temperature is " << tempC << "°C (" << tempF << "°F) with a wind speed of " 
+              << windKPH << " kph (" << windMPH << " mph) and humidity of " << humidity << "%." 
+              << std::endl;
 }
 
 

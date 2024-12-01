@@ -30,39 +30,54 @@ int Listener::levenshteinDistance(const std::string &s1, const std::string &s2) 
 }
 
 int Listener::start_main_listen() {
-    system("sox -d -r 16000 -c 1 -b 16 test.wav trim 0 3");
-    std::this_thread::sleep_for(std::chrono::seconds(3));
-    system("../whisper.cpp/main -m ../whisper.cpp/models/ggml-tiny.en.bin -f test.wav -otxt");
+    bool debug = true;
+    int closestTargetIndex;
     std::vector<std::string> targets = {"Set a 10 second timer", "Set a 60 second timer", "Set a 1 minute timer",
-            "Say Hello", "Open Google", "Play Snake", "Open Canvas", "Open Youtube", "Tell me a joke", "What's the weather in Atlanta?"};
-    std::vector<std::string> closestMatches(targets.size());
-    std::vector<int> minDistances(targets.size(), 9999999);
+                "Say Hello", "Open Google", "Play Snake", "Open Canvas", "Open Youtube", "Tell me a joke", "What's the weather in Atlanta?"};
 
-    std::ifstream file("test.wav.txt");
-    if (file.is_open()) {
-        std::string line;
-        while (getline(file, line)) {
-            for (int i = 0; i < targets.size(); i++) {
-                int distance = levenshteinDistance(targets[i], line);
-                if (distance < minDistances[i]) {
-                    minDistances[i] = distance;
-                    closestMatches[i] = line;
+
+    if (debug) {
+        std::cout << "Enter the number corresponding to the target you want:\n";
+        for (int i = 0; i < targets.size(); i++) {
+            std::cout << i << ": " << targets[i] << "\n";
+        }
+        std::cin >> closestTargetIndex;
+    }
+
+
+    else {
+        system("sox -d -r 16000 -c 1 -b 16 test.wav trim 0 3");
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        system("../whisper.cpp/main -m ../whisper.cpp/models/ggml-tiny.en.bin -f test.wav -otxt");
+        
+        std::vector<std::string> closestMatches(targets.size());
+        std::vector<int> minDistances(targets.size(), 9999999);
+
+        std::ifstream file("test.wav.txt");
+        if (file.is_open()) {
+            std::string line;
+            while (getline(file, line)) {
+                for (int i = 0; i < targets.size(); i++) {
+                    int distance = levenshteinDistance(targets[i], line);
+                    if (distance < minDistances[i]) {
+                        minDistances[i] = distance;
+                        closestMatches[i] = line;
+                    }
                 }
             }
+            file.close();
+        } else {
+            std::cout << "Unable to open file";
         }
-        file.close();
-    } else {
-        std::cout << "Unable to open file";
-    }
 
-    int closestTargetIndex = 0;
-    for (int i = 1; i < targets.size(); i++) {
-        if (minDistances[i] < minDistances[closestTargetIndex]) {
-            closestTargetIndex = i;
+        closestTargetIndex = 0;
+        for (int i = 1; i < targets.size(); i++) {
+            if (minDistances[i] < minDistances[closestTargetIndex]) {
+                closestTargetIndex = i;
+            }
         }
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
-
     return closestTargetIndex;
     
 }
