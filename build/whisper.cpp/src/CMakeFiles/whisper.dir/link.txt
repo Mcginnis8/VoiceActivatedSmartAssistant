@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libwhisper.so.1 -o libwhisper.so.1.7.1 CMakeFiles/whisper.dir/whisper.cpp.o  -Wl,-rpath,/mnt/c/Users/Cole/OneDrive/PreviousDocuments/ECE4122/VoiceActivatedSmartAssistant/build/whisper.cpp/ggml/src: ../ggml/src/libggml.so 
