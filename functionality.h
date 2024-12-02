@@ -14,6 +14,7 @@ public:
     void canvas();
     void openYoutube();
     void weatherAtlanta();
+    void viewStockMarket();
     void executeCommand(int command);
 };
 
