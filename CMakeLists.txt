@@ -20,7 +20,8 @@ find_package(CURL REQUIRED)
 file(GLOB SOURCES 
     ${PROJECT_SOURCE_DIR}/main.cpp 
     ${PROJECT_SOURCE_DIR}/listener.cpp 
-    ${PROJECT_SOURCE_DIR}/functionality.cpp 
+    ${PROJECT_SOURCE_DIR}/functionality.cpp
+    ${PROJECT_SOURCE_DIR}/jokes.txt
 )
 
 # Add the executable
