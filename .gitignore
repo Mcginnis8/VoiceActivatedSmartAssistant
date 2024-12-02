@@ -1,2 +1,4 @@
 config.h
 build/
+SFML/
+whisper.cpp/
