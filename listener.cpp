@@ -35,7 +35,7 @@ int Listener::start_main_listen() {
     int closestTargetIndex;
     std::string textForDisplay;
     std::vector<std::string> targets = {"Set a 10 second timer", "Set a 60 second timer", "Set a 1 minute timer",
-                "Say Hello", "Open Google", "Play Snake", "Open Canvas", "Open Youtube", "Tell me a joke", "What's the weather in Atlanta?"};
+                "Say Hello", "Open Google", "Play Snake", "Open Canvas", "Open Youtube", "Tell me a joke", "What's the weather in Atlanta?", "View the stock market"};
 
 
     if (debug) {
