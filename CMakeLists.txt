@@ -43,3 +43,10 @@ add_custom_command(TARGET SmartAssistant POST_BUILD
         ${PROJECT_SOURCE_DIR}/fonts/KOMIKAP_.ttf
         $<TARGET_FILE_DIR:SmartAssistant>/fonts/KOMIKAP_.ttf
 )
+
+# Copy jokes file to the build directory
+add_custom_command(TARGET SmartAssistant POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PROJECT_SOURCE_DIR}/jokes.txt
+        $<TARGET_FILE_DIR:SmartAssistant>/jokes.txt
+)
