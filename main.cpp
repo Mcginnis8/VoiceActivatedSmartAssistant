@@ -21,12 +21,16 @@ sf::Text timeText;
 std::string currentTimeStr;
 std::mutex timeMutex;
 
+sf::CircleShape pulseCircle(50); // Initial radius of 50 pixels
+std::mutex pulseMutex;
+
 void updateSFMLText(const std::string& displayText) {
     text.setString(displayText);
     window.clear();
     window.draw(text);
     window.draw(bottomText);
     window.draw(timeText);
+    window.draw(pulseCircle); // Draw the pulse circle
     window.display();
 }
 
@@ -47,6 +51,26 @@ void displayCurrentTime() {
         }
     });
     timeThread.detach();
+}
+
+void pulseCircleEffect() {
+    float initialRadius = pulseCircle.getRadius();
+    sf::Clock clock;
+    while (clock.getElapsedTime().asSeconds() < 3.0f) {
+        float elapsedTime = clock.getElapsedTime().asSeconds();
+        float scale = 1.0f + 0.5f * std::sin(elapsedTime * 2 * 3.14159f); //use pi here
+
+        pulseCircle.setRadius(initialRadius * scale);
+        pulseCircle.setFillColor(sf::Color(255, 255, 255, static_cast<sf::Uint8>(255 * (1 - elapsedTime / 3.0f))));
+
+        pulseCircle.setPosition((vm.width - pulseCircle.getGlobalBounds().width) / 2, (vm.height - pulseCircle.getGlobalBounds().height) / 2);
+        
+        updateSFMLText("Listening...");
+        std::this_thread::sleep_for(std::chrono::milliseconds(16));
+    }
+
+    pulseCircle.setRadius(50);
+    pulseCircle.setFillColor(sf::Color::Blue);
 }
 
 int main(int argc, char **argv) {
@@ -90,9 +114,13 @@ int main(int argc, char **argv) {
                 updateSFMLText("Listening...");
                 std::cout << "Listening..." << std::endl;
 
+                // Start the pulse effect in a separate thread
+                std::thread pulseThread(pulseCircleEffect);
+                pulseThread.detach(); // Detach the thread to run independently
+
                 int predict = Listener::start_main_listen();
                 functionality.executeCommand(predict);
-                
+
                 bottomText.setString("Press 'l' to start listening again...");
                 std::cout << displayText << std::endl;
             }

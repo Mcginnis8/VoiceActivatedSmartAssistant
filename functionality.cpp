@@ -49,7 +49,7 @@ void Functionality::tellJoke() {
     }
 
     int index = std::rand() % jokes.size();
-    std::cout << jokes[index] << std::endl;
+    updateSFMLText(jokes[index]);
 }
 
 void Functionality::setTenSecondTimer() {

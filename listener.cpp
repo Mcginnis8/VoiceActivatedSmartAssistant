@@ -31,7 +31,7 @@ int Listener::levenshteinDistance(const std::string &s1, const std::string &s2) 
 }
 
 int Listener::start_main_listen() {
-    bool debug = true;
+    bool debug = false;
     int closestTargetIndex;
     std::string textForDisplay;
     std::vector<std::string> targets = {
