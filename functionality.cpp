@@ -12,6 +12,7 @@
 #include <string>
 #include <curl/curl.h>
 #include "main.h"
+#include <stack>
 
 static size_t writeCallback(void* contents, size_t size, size_t nmemb, std::string* userp) {
     userp->append((char*)contents, size * nmemb);
@@ -282,6 +283,379 @@ void Functionality::viewStockMarket() {
     }
 }
 
+void Functionality::visualizeBubbleSort() {
+    sf::VideoMode vm(1036, 569);
+    sf::RenderWindow window(vm, "Bubble Sort", sf::Style::Default);
+
+    const int arraySize = 100;
+    std::vector<int> array(arraySize);
+
+    // Initialize the array with random values
+    for (int i = 0; i < arraySize; ++i) {
+        array[i] = std::rand() % window.getSize().y;
+    }
+
+    sf::Font font;
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+        std::cerr << "Failed to load font." << std::endl;
+        return;
+    }
+
+    sf::Text title("Bubble Sort", font, 30);
+    title.setFillColor(sf::Color::White);
+    title.setPosition(20, 20);
+
+    bool sorted = false;
+    sf::Clock clock;
+    sf::Clock displayClock;
+
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed ||
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+                window.close();
+            }
+        }
+
+        if (!sorted) {
+            sorted = true;
+            for (int i = 0; i < arraySize - 1; ++i) {
+                if (array[i] > array[i + 1]) {
+                    std::swap(array[i], array[i + 1]);
+                    sorted = false;
+                }
+
+                // Render the array
+                window.clear();
+                window.draw(title);
+                for (int j = 0; j < arraySize; ++j) {
+                    sf::RectangleShape bar;
+                    bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[j]));
+                    bar.setPosition(j * (window.getSize().x / arraySize), window.getSize().y - array[j]);
+                    bar.setFillColor(sf::Color::White);
+                    window.draw(bar);
+                }
+                window.display();
+
+                // Delay to visualize the sorting process
+                sf::sleep(sf::milliseconds(10));
+
+                // Handle window events during sorting
+                if (!window.isOpen()) {
+                    break;
+                }
+            }
+            clock.restart(); // Restart the timer after sorting is done
+        } else {
+            // Keep the window open for 10 more seconds after sorting
+            if (clock.getElapsedTime().asSeconds() >= 10) {
+                window.close();
+            } else {
+                window.clear();
+                window.draw(title);
+                for (int j = 0; j < arraySize; ++j) {
+                    sf::RectangleShape bar;
+                    bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[j]));
+                    bar.setPosition(j * (window.getSize().x / arraySize), window.getSize().y - array[j]);
+                    bar.setFillColor(sf::Color::Green);
+                    window.draw(bar);
+                }
+                window.display();
+            }
+        }
+    }
+}
+
+void Functionality::visualizeInsertionSort() {
+    sf::VideoMode vm(1036, 569);
+    sf::RenderWindow window(vm, "Insertion Sort", sf::Style::Default);
+
+    const int arraySize = 100;
+    std::vector<int> array(arraySize);
+
+    // Initialize the array with random values
+    for (int i = 0; i < arraySize; ++i) {
+        array[i] = std::rand() % window.getSize().y;
+    }
+
+    sf::Font font;
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+        std::cerr << "Failed to load font." << std::endl;
+        return;
+    }
+
+    sf::Text title("Insertion Sort", font, 30);
+    title.setFillColor(sf::Color::White);
+    title.setPosition(20, 20);
+
+    bool sorted = false;
+    sf::Clock clock;
+
+    int i = 1;
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed ||
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+                window.close();
+            }
+        }
+
+        if (!sorted) {
+            if (i < arraySize) {
+                int key = array[i];
+                int j = i - 1;
+
+                while (j >= 0 && array[j] > key) {
+                    array[j + 1] = array[j];
+                    j--;
+
+                    // Render the array
+                    window.clear();
+                    window.draw(title);
+                    for (int k = 0; k < arraySize; ++k) {
+                        sf::RectangleShape bar;
+                        bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
+                        bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
+                        if (k == j + 1) {
+                            bar.setFillColor(sf::Color::Red);
+                        } else {
+                            bar.setFillColor(sf::Color::White);
+                        }
+                        window.draw(bar);
+                    }
+                    window.display();
+
+                    sf::sleep(sf::milliseconds(5));
+
+                    if (!window.isOpen()) {
+                        break;
+                    }
+                }
+                array[j + 1] = key;
+                i++;
+            } else {
+                sorted = true;
+                clock.restart();
+            }
+        } else {
+            if (clock.getElapsedTime().asSeconds() >= 10) {
+                window.close();
+            } else {
+                window.clear();
+                window.draw(title);
+                for (int k = 0; k < arraySize; ++k) {
+                    sf::RectangleShape bar;
+                    bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
+                    bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
+                    bar.setFillColor(sf::Color::Green);
+                    window.draw(bar);
+                }
+                window.display();
+            }
+        }
+    }
+}
+
+void Functionality::visualizeSelectionSort() {
+    sf::VideoMode vm(1036, 569);
+    sf::RenderWindow window(vm, "Selection Sort", sf::Style::Default);
+
+    const int arraySize = 100;
+    std::vector<int> array(arraySize);
+
+    // Initialize the array with random values
+    for (int i = 0; i < arraySize; ++i) {
+        array[i] = std::rand() % window.getSize().y;
+    }
+
+    sf::Font font;
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+        std::cerr << "Failed to load font." << std::endl;
+        return;
+    }
+
+    sf::Text title("Selection Sort", font, 30);
+    title.setFillColor(sf::Color::White);
+    title.setPosition(20, 20);
+
+    bool sorted = false;
+    sf::Clock clock;
+
+    int i = 0;
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed ||
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+                window.close();
+            }
+        }
+
+        if (!sorted) {
+            if (i < arraySize - 1) {
+                int minIndex = i;
+                for (int j = i + 1; j < arraySize; ++j) {
+                    if (array[j] < array[minIndex]) {
+                        minIndex = j;
+                    }
+
+                    // Render the array
+                    window.clear();
+                    window.draw(title);
+                    for (int k = 0; k < arraySize; ++k) {
+                        sf::RectangleShape bar;
+                        bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
+                        bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
+                        if (k == minIndex) {
+                            bar.setFillColor(sf::Color::Red);
+                        } else if (k == i) {
+                            bar.setFillColor(sf::Color::Blue);
+                        } else {
+                            bar.setFillColor(sf::Color::White);
+                        }
+                        window.draw(bar);
+                    }
+                    window.display();
+
+                    sf::sleep(sf::milliseconds(5));
+
+                    if (!window.isOpen()) {
+                        break;
+                    }
+                }
+                std::swap(array[i], array[minIndex]);
+                i++;
+            } else {
+                sorted = true;
+                clock.restart();
+            }
+        } else {
+            if (clock.getElapsedTime().asSeconds() >= 10) {
+                window.close();
+            } else {
+                window.clear();
+                window.draw(title);
+                for (int k = 0; k < arraySize; ++k) {
+                    sf::RectangleShape bar;
+                    bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
+                    bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
+                    bar.setFillColor(sf::Color::Green);
+                    window.draw(bar);
+                }
+                window.display();
+            }
+        }
+    }
+}
+
+void Functionality::visualizeQuickSort() {
+    sf::VideoMode vm(1036, 569);
+    sf::RenderWindow window(vm, "Quick Sort", sf::Style::Default);
+
+    const int arraySize = 100;
+    std::vector<int> array(arraySize);
+
+    // Initialize the array with random values
+    for (int i = 0; i < arraySize; ++i) {
+        array[i] = std::rand() % window.getSize().y;
+    }
+
+    sf::Font font;
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+        std::cerr << "Failed to load font." << std::endl;
+        return;
+    }
+
+    sf::Text title("Quick Sort", font, 30);
+    title.setFillColor(sf::Color::White);
+    title.setPosition(20, 20);
+
+    bool sorted = false;
+    sf::Clock clock;
+
+    std::stack<std::pair<int, int>> stack;
+    stack.push({0, arraySize - 1});
+
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed ||
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+                window.close();
+            }
+        }
+
+        if (!sorted) {
+            if (!stack.empty()) {
+                int low = stack.top().first;
+                int high = stack.top().second;
+                stack.pop();
+
+                if (low < high) {
+                    int pivot = array[high];
+                    int i = low - 1;
+
+                    for (int j = low; j <= high - 1; ++j) {
+                        if (array[j] < pivot) {
+                            i++;
+                            std::swap(array[i], array[j]);
+                        }
+
+                        // Render the array
+                        window.clear();
+                        window.draw(title);
+                        for (int k = 0; k < arraySize; ++k) {
+                            sf::RectangleShape bar;
+                            bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
+                            bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
+                            if (k == i || k == j) {
+                                bar.setFillColor(sf::Color::Red);
+                            } else if (k == high) {
+                                bar.setFillColor(sf::Color::Blue);
+                            } else {
+                                bar.setFillColor(sf::Color::White);
+                            }
+                            window.draw(bar);
+                        }
+                        window.display();
+
+                        sf::sleep(sf::milliseconds(5));
+
+                        if (!window.isOpen()) {
+                            break;
+                        }
+                    }
+                    std::swap(array[i + 1], array[high]);
+                    int pi = i + 1;
+
+                    stack.push({low, pi - 1});
+                    stack.push({pi + 1, high});
+                }
+            } else {
+                sorted = true;
+                clock.restart();
+            }
+        } else {
+            if (clock.getElapsedTime().asSeconds() >= 10) {
+                window.close();
+            } else {
+                window.clear();
+                window.draw(title);
+                for (int k = 0; k < arraySize; ++k) {
+                    sf::RectangleShape bar;
+                    bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
+                    bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
+                    bar.setFillColor(sf::Color::Green);
+                    window.draw(bar);
+                }
+                window.display();
+            }
+        }
+    }
+}
+
 void Functionality::executeCommand(int command) {
     switch (command) {
         case 0:
@@ -316,6 +690,18 @@ void Functionality::executeCommand(int command) {
             break;
         case 10:
             viewStockMarket();
+            break;
+        case 11:
+            visualizeBubbleSort();
+            break;
+        case 12:
+            visualizeInsertionSort();
+            break;
+        case 13:
+            visualizeSelectionSort();
+            break;
+        case 14:
+            visualizeQuickSort();
             break;
         default:
             std::cout << "Unknown command" << std::endl;

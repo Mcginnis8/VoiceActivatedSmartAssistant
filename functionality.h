@@ -15,6 +15,10 @@ public:
     void openYoutube();
     void weatherAtlanta();
     void viewStockMarket();
+    void visualizeBubbleSort();
+    void visualizeInsertionSort();
+    void visualizeSelectionSort();
+    void visualizeQuickSort();
     void executeCommand(int command);
 };
 

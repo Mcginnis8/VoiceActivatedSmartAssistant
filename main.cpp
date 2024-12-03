@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
     bottomText.setFont(font);
     bottomText.setCharacterSize(20);
     bottomText.setFillColor(sf::Color::Green);
-    bottomText.setPosition(20, 400);
+    bottomText.setPosition(20, 450);
     bottomText.setString("");
 
     std::string displayText = "Press 'l' to start listening...";

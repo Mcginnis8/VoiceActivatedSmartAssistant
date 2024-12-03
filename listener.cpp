@@ -34,14 +34,29 @@ int Listener::start_main_listen() {
     bool debug = true;
     int closestTargetIndex;
     std::string textForDisplay;
-    std::vector<std::string> targets = {"Set a 10 second timer", "Set a 60 second timer", "Set a 1 minute timer",
-                "Say Hello", "Open Google", "Play Snake", "Open Canvas", "Open Youtube", "Tell me a joke", "What's the weather in Atlanta?", "View the stock market"};
+    std::vector<std::string> targets = {
+        "Set a 10 second timer", 
+        "Set a 60 second timer", 
+        "Set a 1 minute timer",
+        "Say Hello", 
+        "Open Google", 
+        "Play Snake", 
+        "Open Canvas", 
+        "Open Youtube", 
+        "Tell me a joke", 
+        "What's the weather in Atlanta?", 
+        "View the stock market", 
+        "Show bubble sort",
+        "Show insertion sort",
+        "Show selection sort",
+        "Show quick sort",
+    };
 
 
     if (debug) {
         std::cout << "DEBUG MODE FOR WINDOWS, if you are AKI, SET DEBUG TO FALSE IN LISTENER.CPP\n";
         std::cout << "Enter the number corresponding to the target you want:\n";
-        textForDisplay = "DEBUG MODE FOR WINDOWS\nIf you are AKI, SET DEBUG TO FALSE IN LISTENER.CPP\nEnter the number for the target you want IN THE CONSOLE\n";
+        textForDisplay = "Say a command, or for Windows: Enter the number for the target you want IN THE CONSOLE\n";
         for (int i = 0; i < targets.size(); i++) {
             std::cout << i << ": " << targets[i] << "\n";
             textForDisplay += std::to_string(i) + ": " + targets[i] + "\n";
