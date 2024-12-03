@@ -22,6 +22,7 @@ file(GLOB SOURCES
     ${PROJECT_SOURCE_DIR}/listener.cpp 
     ${PROJECT_SOURCE_DIR}/functionality.cpp
     ${PROJECT_SOURCE_DIR}/jokes.txt
+    ${PROJECT_SOURCE_DIR}/beethoven.mp3
 )
 
 # Add the executable
@@ -49,4 +50,11 @@ add_custom_command(TARGET SmartAssistant POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${PROJECT_SOURCE_DIR}/jokes.txt
         $<TARGET_FILE_DIR:SmartAssistant>/jokes.txt
+)
+
+# Copy music file to the build directory
+add_custom_command(TARGET SmartAssistant POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PROJECT_SOURCE_DIR}/beethoven.mp3
+        $<TARGET_FILE_DIR:SmartAssistant>/beethoven.mp3
 )
