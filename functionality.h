@@ -1,7 +1,17 @@
+/*
+Authors: Cole McGinnis, Alexander Snapp, John Donahoe
+Class: ECE 6122 A
+Last Date Modified: 12/3/24
+
+Description:
+
+Functionality Class header file.
+*/
 #ifndef FUNCTIONALITY_H
 #define FUNCTIONALITY_H
 
-class Functionality {
+class Functionality
+{
 public:
     Functionality();
     void tellJoke();

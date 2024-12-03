@@ -1,3 +1,14 @@
+/*
+Authors: Cole McGinnis, Alexander Snapp, John Donahoe
+Class: ECE 6122 A
+Last Date Modified: 12/3/24
+
+Description:
+
+Listener class that records a 3 second speech input from a
+user and then calls the whisper.cpp model to convert to
+text.
+*/
 #include "listener.h"
 #include "main.h"
 #include <vector>
@@ -9,18 +20,27 @@
 #include <iostream>
 
 // Function to calculate the Levenshtein distance between two strings
-int Listener::levenshteinDistance(const std::string &s1, const std::string &s2) {
+// Helpful to find the closest command
+int Listener::levenshteinDistance(const std::string &s1, const std::string &s2)
+{
     int m = s1.size();
     int n = s2.size();
     std::vector<std::vector<int>> d(m + 1, std::vector<int>(n + 1));
 
-    for (int i = 0; i <= m; i++) {
-        for (int j = 0; j <= n; j++) {
-            if (i == 0) {
+    for (int i = 0; i <= m; i++)
+    {
+        for (int j = 0; j <= n; j++)
+        {
+            if (i == 0)
+            {
                 d[i][j] = j;
-            } else if (j == 0) {
+            }
+            else if (j == 0)
+            {
                 d[i][j] = i;
-            } else {
+            }
+            else
+            {
                 int cost = (s1[i - 1] != s2[j - 1]) ? 1 : 0;
                 d[i][j] = std::min({d[i - 1][j - 1] + cost, d[i][j - 1] + 1, d[i - 1][j] + 1});
             }
@@ -30,7 +50,10 @@ int Listener::levenshteinDistance(const std::string &s1, const std::string &s2) 
     return d[m][n];
 }
 
-int Listener::start_main_listen() {
+// Main function to listen to the user's speech input
+// Has a DEBUG mode that can be used if the user's microphone does not work
+int Listener::start_main_listen()
+{
     bool debug = false;
     int closestTargetIndex;
     std::string textForDisplay;
@@ -56,17 +79,21 @@ int Listener::start_main_listen() {
     };
 
 
-    if (debug) {
+    if (debug)
+    {
         std::cout << "DEBUG MODE FOR WINDOWS, if you are AKI, SET DEBUG TO FALSE IN LISTENER.CPP\n";
         std::cout << "Enter the number corresponding to the target you want:\n";
         textForDisplay = "Say a command, or for Windows: Enter the number for the target you want IN THE CONSOLE\n";
-        for (int i = 0; i < targets.size(); i++) {
+        for (int i = 0; i < targets.size(); i++)
+        {
             std::cout << i << ": " << targets[i] << "\n";
             textForDisplay += std::to_string(i) + ": " + targets[i] + "\n";
         }
         updateSFMLText(textForDisplay);
         std::cin >> closestTargetIndex;
-    } else {
+    }
+    else
+    {
         system("sox -d -r 16000 -c 1 -b 16 test.wav trim 0 3");
         std::this_thread::sleep_for(std::chrono::seconds(3));
         system("../whisper.cpp/main -m ../whisper.cpp/models/ggml-tiny.en.bin -f test.wav -otxt");
@@ -75,26 +102,34 @@ int Listener::start_main_listen() {
         std::vector<int> minDistances(targets.size(), 9999999);
 
         std::ifstream file("test.wav.txt");
-        if (file.is_open()) {
+        if (file.is_open())
+        {
             std::string line;
-            while (getline(file, line)) {
-                for (int i = 0; i < targets.size(); i++) {
+            while (getline(file, line))
+            {
+                for (int i = 0; i < targets.size(); i++)
+                {
                     int distance = levenshteinDistance(targets[i], line);
-                    if (distance < minDistances[i]) {
+                    if (distance < minDistances[i])
+                    {
                         minDistances[i] = distance;
                         closestMatches[i] = line;
                     }
                 }
             }
             file.close();
-        } else {
+        }
+        else
+        {
             std::cout << "Unable to open file";
             updateSFMLText("Unable to open file");
         }
 
         closestTargetIndex = 0;
-        for (int i = 1; i < targets.size(); i++) {
-            if (minDistances[i] < minDistances[closestTargetIndex]) {
+        for (int i = 1; i < targets.size(); i++)
+        {
+            if (minDistances[i] < minDistances[closestTargetIndex])
+            {
                 closestTargetIndex = i;
             }
         }
