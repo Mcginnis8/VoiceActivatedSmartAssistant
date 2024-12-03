@@ -19,6 +19,7 @@ public:
     void visualizeInsertionSort();
     void visualizeSelectionSort();
     void visualizeQuickSort();
+    void playBeethoven();
     void executeCommand(int command);
 };
 
