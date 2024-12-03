@@ -1,3 +1,13 @@
+/*
+Authors: Cole McGinnis, Alexander Snapp, John Donahoe
+Class: ECE 6122 A
+Last Date Modified: 12/3/24
+
+Description:
+
+Main file for the Voice Assistant. This file controls the SFML
+Window and the overall functionality of the Assistant.
+*/
 #include "main.h"
 #include <stdlib.h>
 #include <vector>
@@ -24,7 +34,9 @@ std::mutex timeMutex;
 sf::CircleShape pulseCircle(50); // Initial radius of 50 pixels
 std::mutex pulseMutex;
 
-void updateSFMLText(const std::string& displayText) {
+// Function that can be called in functionality.cpp to update the SFML window
+void updateSFMLText(const std::string& displayText)
+{
     text.setString(displayText);
     window.clear();
     window.draw(text);
@@ -34,7 +46,10 @@ void updateSFMLText(const std::string& displayText) {
     window.display();
 }
 
-void displayCurrentTime() {
+// Function that displays the current time in the bottom right corner of the window
+// Using the thread library to always run concurrently.
+void displayCurrentTime()
+{
     std::thread timeThread([]() {
         while (true) {
             auto now = std::chrono::system_clock::now();
@@ -53,10 +68,13 @@ void displayCurrentTime() {
     timeThread.detach();
 }
 
-void pulseCircleEffect() {
+// Function that creates a pulse effect on the circle in the center of the window
+void pulseCircleEffect()
+{
     float initialRadius = pulseCircle.getRadius();
     sf::Clock clock;
-    while (clock.getElapsedTime().asSeconds() < 3.0f) {
+    while (clock.getElapsedTime().asSeconds() < 3.0f)
+    {
         float elapsedTime = clock.getElapsedTime().asSeconds();
         float scale = 1.0f + 0.5f * std::sin(elapsedTime * 2 * 3.14159f); //use pi here
 
@@ -73,8 +91,11 @@ void pulseCircleEffect() {
     pulseCircle.setFillColor(sf::Color::Blue);
 }
 
-int main(int argc, char **argv) {
-    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+// Main function
+int main(int argc, char **argv)
+{
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
+    {
         std::cerr << "Failed to load font." << std::endl;
         return -1;
     }
@@ -102,14 +123,18 @@ int main(int argc, char **argv) {
 
     displayCurrentTime();
 
-    while (window.isOpen()) {
+    while (window.isOpen())
+    {
         sf::Event event;
-        while (window.pollEvent(event)) {
+        while (window.pollEvent(event))
+        {
             if (event.type == sf::Event::Closed || 
-               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+            {
                 window.close();
             }
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::L) {
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::L)
+            {
                 bottomText.setString("");
                 updateSFMLText("Listening...");
                 std::cout << "Listening..." << std::endl;
@@ -126,7 +151,7 @@ int main(int argc, char **argv) {
             }
         }
 
-        {
+        { // needs to be sequential
             std::lock_guard<std::mutex> lock(timeMutex);
             timeText.setString(currentTimeStr);
         }

@@ -1,3 +1,14 @@
+/*
+Authors: Cole McGinnis, Alexander Snapp, John Donahoe
+Class: ECE 6122 A
+Last Date Modified: 12/3/24
+
+Description:
+
+This class provides the main functionality of the
+Voice Assistant. Each function below is a separate
+utility that the Assistant is able to provide.
+*/
 #include "functionality.h"
 #include <iostream>
 #include <thread>
@@ -16,20 +27,25 @@
 
 std::vector<std::string> history;
 
-static size_t writeCallback(void* contents, size_t size, size_t nmemb, std::string* userp) {
+// Helper function for CURL requesting
+static size_t writeCallback(void* contents, size_t size, size_t nmemb, std::string* userp)
+{
     userp->append((char*)contents, size * nmemb);
     return size * nmemb;
 }
 
-
-Functionality::Functionality() {
-    // Initialize random seed
+// Constructor for the Functionality class
+Functionality::Functionality()
+{
     std::srand(std::time(nullptr));
 }
 
-void Functionality::tellJoke() {
+// Tell a Joke function that reads from the jokes.txt file
+void Functionality::tellJoke()
+{
     std::ifstream file("jokes.txt");
-    if (!file.is_open()) {
+    if (!file.is_open())
+    {
         std::cout << "Error opening jokes.txt" << std::endl;
         updateSFMLText("Error opening jokes.txt");
         return;
@@ -37,12 +53,16 @@ void Functionality::tellJoke() {
 
     std::vector<std::string> jokes;
     std::string line;
-    while (std::getline(file, line)) {
+
+    while (std::getline(file, line))
+    {
         jokes.push_back(line);
     }
+
     file.close();
 
-    if (jokes.empty()) {
+    if (jokes.empty())
+    {
         std::cout << "No jokes found." << std::endl;
         updateSFMLText("No jokes found.");
         return;
@@ -52,8 +72,11 @@ void Functionality::tellJoke() {
     updateSFMLText(jokes[index]);
 }
 
-void Functionality::setTenSecondTimer() {
-    for (int i = 10; i > 0; i--) {
+// Set a 10 second timer function
+void Functionality::setTenSecondTimer()
+{
+    for (int i = 10; i > 0; i--)
+    {
         std::cout << i << std::endl;
         updateSFMLText(std::to_string(i));
         std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -62,8 +85,11 @@ void Functionality::setTenSecondTimer() {
     updateSFMLText("Time's up!");
 }
 
-void Functionality::setSixtySecondTimer() {
-    for (int i = 60; i > 0; i--) {
+// Set a 60 second timer function
+void Functionality::setSixtySecondTimer()
+{
+    for (int i = 60; i > 0; i--)
+    {
         std::cout << i << std::endl;
         updateSFMLText(std::to_string(i));
         std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -71,7 +97,10 @@ void Functionality::setSixtySecondTimer() {
     std::cout << "Time's up!" << std::endl;
 }
 
-void Functionality::createCalendarInvite() {
+// Create a calendar invite function
+// Directly integrates with Outlook or Gmail using .ics formatting
+void Functionality::createCalendarInvite()
+{
     // Get current time and time + 30 minutes
     time_t now = time(0);
     time_t later = now + (30 * 60); // 30 minutes in seconds
@@ -100,8 +129,12 @@ void Functionality::createCalendarInvite() {
     updateSFMLText("Calendar invite created!");
 }
 
-void Functionality::setOneMinuteTimer() {
-    for (int i = 60; i > 0; i--) {
+// Set one minute timer function
+// Voice Alternative to set a sixty second timer
+void Functionality::setOneMinuteTimer()
+{
+    for (int i = 60; i > 0; i--)
+    {
         std::cout << i << std::endl;
         updateSFMLText(std::to_string(i));
         std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -110,47 +143,63 @@ void Functionality::setOneMinuteTimer() {
     std::cout << "Time's up!" << std::endl;
 }
 
-void Functionality::playBeethoven() {
+// Function that plays a Beethoven song from the command line
+void Functionality::playBeethoven()
+{
     std::string command = "ffplay -autoexit -nodisp -t 10 beethoven.mp3";
     system(command.c_str());
     updateSFMLText("Playback finished.");
 }
 
-void Functionality::sayHello() {
+// Simple test out of the voice assistant
+void Functionality::sayHello()
+{
     std::cout << "Hello!" << std::endl;
     updateSFMLText("Hello!");
 }
 
-void Functionality::openGoogle() {
+// Function that opens a browser of Google.com
+void Functionality::openGoogle()
+{
     system("open -a \"Google Chrome\" https://www.google.com/");
     updateSFMLText("Opened Google");
 }
 
-void Functionality::snake() { //Maybe remove this later
+// Function that opens a browser of Snake Game
+void Functionality::snake()
+{
     system("open -a \"Google Chrome\" https://snakegame.org");
 }
 
-void Functionality::canvas() {
+// Function that opens a browser of Canvas for school
+void Functionality::canvas()
+{
     system("open -a \"Google Chrome\" https://gatech.instructure.com/courses/");
     updateSFMLText("Opened Canvas");
 }
 
-void Functionality::openYoutube() {
+// Function that opens a browser of Youtube
+void Functionality::openYoutube()
+{
     system("open -a \"Google Chrome\" https://www.youtube.com/");
     updateSFMLText("Opened Youtube");
 }
 
-void Functionality::weatherAtlanta() {
+// Function that calls an API to find what the current weather is in Atlanta
+void Functionality::weatherAtlanta()
+{
     std::string command = "curl -s \"https://api.weatherapi.com/v1/current.json?q=30308&key=" + WEATHER_API_KEY + "\"";
     std::string response = "";
     char buffer[128];
     FILE* pipe = popen(command.c_str(), "r");
-    if (!pipe) {
+    if (!pipe)
+    {
         std::cout << "Failed to get weather data." << std::endl;
         updateSFMLText("Failed to get weather data.");
         return;
     }
-    while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
+    while (fgets(buffer, sizeof(buffer), pipe) != nullptr)
+    {
         response += buffer;
     }
     pclose(pipe);
@@ -199,7 +248,9 @@ void Functionality::weatherAtlanta() {
     updateSFMLText(output);
 }
 
-void Functionality::viewStockMarket() {
+// Command that opens a new SFML Window that displays the S&P 500, Dow Jones, and Nasdaq
+void Functionality::viewStockMarket()
+{
     sf::VideoMode stock_vm(1036, 569);
     sf::RenderWindow stock_window(stock_vm, "Stock Market", sf::Style::Default);
     sf::Font stock_font;
@@ -212,12 +263,12 @@ void Functionality::viewStockMarket() {
 
     sf::Clock stock_clock;
 
-    if (!stock_font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+    if (!stock_font.loadFromFile("fonts/KOMIKAP_.ttf"))
+    {
         std::cerr << "Failed to load font." << std::endl;
         return;
     }
 
-    // Set up labels
     stock_label_SandP.setFont(stock_font);
     stock_label_SandP.setCharacterSize(36);
     stock_label_SandP.setFillColor(sf::Color::Yellow);
@@ -236,7 +287,6 @@ void Functionality::viewStockMarket() {
     stock_label_Nasdaq.setPosition(700, 20);
     stock_label_Nasdaq.setString("Nasdaq:");
 
-    // Set up text
     stock_text_SandP.setFont(stock_font);
     stock_text_SandP.setCharacterSize(36);
     stock_text_SandP.setFillColor(sf::Color::White);
@@ -254,31 +304,41 @@ void Functionality::viewStockMarket() {
 
     bool firstRun = true;
 
-    while (stock_window.isOpen()) {
+    while (stock_window.isOpen())
+    {
         sf::Event event;
-        while (stock_window.pollEvent(event)) {
+        while (stock_window.pollEvent(event))
+        {
             if (event.type == sf::Event::Closed || 
-               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+               {
                 stock_window.close();
             }
         }
-        // only update every 60 seconds
-        if (!firstRun && stock_clock.getElapsedTime().asSeconds() < 60) {
+        // only update stock values every 60 seconds to save API
+        if (!firstRun && stock_clock.getElapsedTime().asSeconds() < 60)
+        {
             continue;
-        } else {
+        }
+        else
+        {
             firstRun = false;
         }
         stock_clock.restart();
-        // call api to find S&P 500, Dow Jones, and Nasdaq
+        
         std::string command_SandP = "curl -s 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=SPY&apikey=" + STOCK_MARKET_API_KEY + "'";
         std::string response_SandP = "";
         char buffer_SandP[128];
         FILE* pipe_SandP = popen(command_SandP.c_str(), "r");
-        if (!pipe_SandP) {
+
+        if (!pipe_SandP)
+        {
             std::cout << "Failed to get stock data." << std::endl;
             return;
         }
-        while (fgets(buffer_SandP, sizeof(buffer_SandP), pipe_SandP) != nullptr) {
+
+        while (fgets(buffer_SandP, sizeof(buffer_SandP), pipe_SandP) != nullptr)
+        {
             response_SandP += buffer_SandP;
         }
         pclose(pipe_SandP);
@@ -287,11 +347,15 @@ void Functionality::viewStockMarket() {
         std::string response_DowJones = "";
         char buffer_DowJones[128];
         FILE* pipe_DowJones = popen(command_DowJones.c_str(), "r");
-        if (!pipe_DowJones) {
+
+        if (!pipe_DowJones)
+        {
             std::cout << "Failed to get stock data." << std::endl;
             return;
         }
-        while (fgets(buffer_DowJones, sizeof(buffer_DowJones), pipe_DowJones) != nullptr) {
+
+        while (fgets(buffer_DowJones, sizeof(buffer_DowJones), pipe_DowJones) != nullptr)
+        {
             response_DowJones += buffer_DowJones;
         }
         pclose(pipe_DowJones);
@@ -300,11 +364,14 @@ void Functionality::viewStockMarket() {
         std::string response_Nasdaq = "";
         char buffer_Nasdaq[128];
         FILE* pipe_Nasdaq = popen(command_Nasdaq.c_str(), "r");
-        if (!pipe_Nasdaq) {
+
+        if (!pipe_Nasdaq)
+        {
             std::cout << "Failed to get stock data." << std::endl;
             return;
         }
-        while (fgets(buffer_Nasdaq, sizeof(buffer_Nasdaq), pipe_Nasdaq) != nullptr) {
+        while (fgets(buffer_Nasdaq, sizeof(buffer_Nasdaq), pipe_Nasdaq) != nullptr)
+        {
             response_Nasdaq += buffer_Nasdaq;
         }
         pclose(pipe_Nasdaq);
@@ -323,7 +390,7 @@ void Functionality::viewStockMarket() {
                 end = response.find(",", pos);
                 return response.substr(pos, end - pos);
             }
-        };
+        }; // couldve made this a function because its used in the weather func also
 
         std::string price_SandP = extract("05. price", response_SandP);
         std::string price_DowJones = extract("05. price", response_DowJones);
@@ -346,7 +413,9 @@ void Functionality::viewStockMarket() {
     }
 }
 
-void Functionality::visualizeBubbleSort() {
+// Function that visualizes the Bubble Sort algorithm in SFML
+void Functionality::visualizeBubbleSort()
+{
     sf::VideoMode vm(1036, 569);
     sf::RenderWindow window(vm, "Bubble Sort", sf::Style::Default);
 
@@ -354,12 +423,14 @@ void Functionality::visualizeBubbleSort() {
     std::vector<int> array(arraySize);
 
     // Initialize the array with random values
-    for (int i = 0; i < arraySize; ++i) {
+    for (int i = 0; i < arraySize; ++i)
+    {
         array[i] = std::rand() % window.getSize().y;
     }
 
     sf::Font font;
-    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
+    {
         std::cerr << "Failed to load font." << std::endl;
         return;
     }
@@ -372,19 +443,25 @@ void Functionality::visualizeBubbleSort() {
     sf::Clock clock;
     sf::Clock displayClock;
 
-    while (window.isOpen()) {
+    while (window.isOpen())
+    {
         sf::Event event;
-        while (window.pollEvent(event)) {
+        while (window.pollEvent(event))
+        {
             if (event.type == sf::Event::Closed ||
-               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+            {
                 window.close();
             }
         }
 
-        if (!sorted) {
+        if (!sorted)
+        {
             sorted = true;
-            for (int i = 0; i < arraySize - 1; ++i) {
-                if (array[i] > array[i + 1]) {
+            for (int i = 0; i < arraySize - 1; ++i)
+            {
+                if (array[i] > array[i + 1])
+                {
                     std::swap(array[i], array[i + 1]);
                     sorted = false;
                 }
@@ -392,7 +469,8 @@ void Functionality::visualizeBubbleSort() {
                 // Render the array
                 window.clear();
                 window.draw(title);
-                for (int j = 0; j < arraySize; ++j) {
+                for (int j = 0; j < arraySize; ++j)
+                {
                     sf::RectangleShape bar;
                     bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[j]));
                     bar.setPosition(j * (window.getSize().x / arraySize), window.getSize().y - array[j]);
@@ -405,19 +483,26 @@ void Functionality::visualizeBubbleSort() {
                 sf::sleep(sf::milliseconds(10));
 
                 // Handle window events during sorting
-                if (!window.isOpen()) {
+                if (!window.isOpen())
+                {
                     break;
                 }
             }
             clock.restart(); // Restart the timer after sorting is done
-        } else {
+        }
+        else
+        {
             // Keep the window open for 10 more seconds after sorting
-            if (clock.getElapsedTime().asSeconds() >= 10) {
+            if (clock.getElapsedTime().asSeconds() >= 10)
+            {
                 window.close();
-            } else {
+            }
+            else
+            {
                 window.clear();
                 window.draw(title);
-                for (int j = 0; j < arraySize; ++j) {
+                for (int j = 0; j < arraySize; ++j)
+                {
                     sf::RectangleShape bar;
                     bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[j]));
                     bar.setPosition(j * (window.getSize().x / arraySize), window.getSize().y - array[j]);
@@ -430,7 +515,9 @@ void Functionality::visualizeBubbleSort() {
     }
 }
 
-void Functionality::visualizeInsertionSort() {
+// Function that visualizes the Insertion Sort algorithm in SFML
+void Functionality::visualizeInsertionSort()
+{
     sf::VideoMode vm(1036, 569);
     sf::RenderWindow window(vm, "Insertion Sort", sf::Style::Default);
 
@@ -438,12 +525,14 @@ void Functionality::visualizeInsertionSort() {
     std::vector<int> array(arraySize);
 
     // Initialize the array with random values
-    for (int i = 0; i < arraySize; ++i) {
+    for (int i = 0; i < arraySize; ++i)
+    {
         array[i] = std::rand() % window.getSize().y;
     }
 
     sf::Font font;
-    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
+    {
         std::cerr << "Failed to load font." << std::endl;
         return;
     }
@@ -456,34 +545,44 @@ void Functionality::visualizeInsertionSort() {
     sf::Clock clock;
 
     int i = 1;
-    while (window.isOpen()) {
+    while (window.isOpen())
+    {
         sf::Event event;
-        while (window.pollEvent(event)) {
+        while (window.pollEvent(event))
+        {
             if (event.type == sf::Event::Closed ||
-               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+            {
                 window.close();
             }
         }
 
-        if (!sorted) {
-            if (i < arraySize) {
+        if (!sorted)
+        {
+            if (i < arraySize)
+            {
                 int key = array[i];
                 int j = i - 1;
 
-                while (j >= 0 && array[j] > key) {
+                while (j >= 0 && array[j] > key)
+                {
                     array[j + 1] = array[j];
                     j--;
 
                     // Render the array
                     window.clear();
                     window.draw(title);
-                    for (int k = 0; k < arraySize; ++k) {
+                    for (int k = 0; k < arraySize; ++k)
+                    {
                         sf::RectangleShape bar;
                         bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
                         bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
-                        if (k == j + 1) {
+                        if (k == j + 1)
+                        {
                             bar.setFillColor(sf::Color::Red);
-                        } else {
+                        }
+                        else
+                        {
                             bar.setFillColor(sf::Color::White);
                         }
                         window.draw(bar);
@@ -492,23 +591,32 @@ void Functionality::visualizeInsertionSort() {
 
                     sf::sleep(sf::milliseconds(5));
 
-                    if (!window.isOpen()) {
+                    if (!window.isOpen())
+                    {
                         break;
                     }
                 }
                 array[j + 1] = key;
                 i++;
-            } else {
+            }
+            else
+            {
                 sorted = true;
                 clock.restart();
             }
-        } else {
-            if (clock.getElapsedTime().asSeconds() >= 10) {
+        }
+        else
+        {
+            if (clock.getElapsedTime().asSeconds() >= 10)
+            {
                 window.close();
-            } else {
+            }
+            else
+            {
                 window.clear();
                 window.draw(title);
-                for (int k = 0; k < arraySize; ++k) {
+                for (int k = 0; k < arraySize; ++k)
+                {
                     sf::RectangleShape bar;
                     bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
                     bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
@@ -521,7 +629,9 @@ void Functionality::visualizeInsertionSort() {
     }
 }
 
-void Functionality::visualizeSelectionSort() {
+// Function that visualizes the Selection Sort algorithm in SFML
+void Functionality::visualizeSelectionSort()
+{
     sf::VideoMode vm(1036, 569);
     sf::RenderWindow window(vm, "Selection Sort", sf::Style::Default);
 
@@ -529,12 +639,14 @@ void Functionality::visualizeSelectionSort() {
     std::vector<int> array(arraySize);
 
     // Initialize the array with random values
-    for (int i = 0; i < arraySize; ++i) {
+    for (int i = 0; i < arraySize; ++i)
+    {
         array[i] = std::rand() % window.getSize().y;
     }
 
     sf::Font font;
-    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
+    {
         std::cerr << "Failed to load font." << std::endl;
         return;
     }
@@ -547,35 +659,48 @@ void Functionality::visualizeSelectionSort() {
     sf::Clock clock;
 
     int i = 0;
-    while (window.isOpen()) {
+    while (window.isOpen())
+    {
         sf::Event event;
-        while (window.pollEvent(event)) {
+        while (window.pollEvent(event))
+        {
             if (event.type == sf::Event::Closed ||
-               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+            {
                 window.close();
             }
         }
 
-        if (!sorted) {
-            if (i < arraySize - 1) {
+        if (!sorted)
+        {
+            if (i < arraySize - 1)
+            {
                 int minIndex = i;
-                for (int j = i + 1; j < arraySize; ++j) {
-                    if (array[j] < array[minIndex]) {
+                for (int j = i + 1; j < arraySize; ++j)
+                {
+                    if (array[j] < array[minIndex])
+                    {
                         minIndex = j;
                     }
 
                     // Render the array
                     window.clear();
                     window.draw(title);
-                    for (int k = 0; k < arraySize; ++k) {
+                    for (int k = 0; k < arraySize; ++k)
+                    {
                         sf::RectangleShape bar;
                         bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
                         bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
-                        if (k == minIndex) {
+                        if (k == minIndex)
+                        {
                             bar.setFillColor(sf::Color::Red);
-                        } else if (k == i) {
+                        }
+                        else if (k == i)
+                        {
                             bar.setFillColor(sf::Color::Blue);
-                        } else {
+                        }
+                        else
+                        {
                             bar.setFillColor(sf::Color::White);
                         }
                         window.draw(bar);
@@ -584,23 +709,32 @@ void Functionality::visualizeSelectionSort() {
 
                     sf::sleep(sf::milliseconds(5));
 
-                    if (!window.isOpen()) {
+                    if (!window.isOpen())
+                    {
                         break;
                     }
                 }
                 std::swap(array[i], array[minIndex]);
                 i++;
-            } else {
+            }
+            else
+            {
                 sorted = true;
                 clock.restart();
             }
-        } else {
-            if (clock.getElapsedTime().asSeconds() >= 10) {
+        }
+        else
+        {
+            if (clock.getElapsedTime().asSeconds() >= 10)
+            {
                 window.close();
-            } else {
+            }
+            else
+            {
                 window.clear();
                 window.draw(title);
-                for (int k = 0; k < arraySize; ++k) {
+                for (int k = 0; k < arraySize; ++k)
+                {
                     sf::RectangleShape bar;
                     bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
                     bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
@@ -613,15 +747,20 @@ void Functionality::visualizeSelectionSort() {
     }
 }
 
-void Functionality::commandLog() {
+// Function that prints the command log to the SFML window
+void Functionality::commandLog()
+{
     std::string historyText = "";
-    for (int i = 0; i < history.size(); i++) {
+    for (int i = 0; i < history.size(); i++)
+    {
         historyText += "\n" + history[i];
     }
     updateSFMLText(historyText);
 }
 
-void Functionality::visualizeQuickSort() {
+// Function that visualizes the Quick Sort algorithm in SFML
+void Functionality::visualizeQuickSort()
+{
     sf::VideoMode vm(1036, 569);
     sf::RenderWindow window(vm, "Quick Sort", sf::Style::Default);
 
@@ -629,12 +768,14 @@ void Functionality::visualizeQuickSort() {
     std::vector<int> array(arraySize);
 
     // Initialize the array with random values
-    for (int i = 0; i < arraySize; ++i) {
+    for (int i = 0; i < arraySize; ++i)
+    {
         array[i] = std::rand() % window.getSize().y;
     }
 
     sf::Font font;
-    if (!font.loadFromFile("fonts/KOMIKAP_.ttf")) {
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
+    {
         std::cerr << "Failed to load font." << std::endl;
         return;
     }
@@ -649,27 +790,35 @@ void Functionality::visualizeQuickSort() {
     std::stack<std::pair<int, int>> stack;
     stack.push({0, arraySize - 1});
 
-    while (window.isOpen()) {
+    while (window.isOpen())
+    {
         sf::Event event;
-        while (window.pollEvent(event)) {
+        while (window.pollEvent(event))
+        {
             if (event.type == sf::Event::Closed ||
-               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
+               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+            {
                 window.close();
             }
         }
 
-        if (!sorted) {
-            if (!stack.empty()) {
+        if (!sorted)
+        {
+            if (!stack.empty())
+            {
                 int low = stack.top().first;
                 int high = stack.top().second;
                 stack.pop();
 
-                if (low < high) {
+                if (low < high)
+                {
                     int pivot = array[high];
                     int i = low - 1;
 
-                    for (int j = low; j <= high - 1; ++j) {
-                        if (array[j] < pivot) {
+                    for (int j = low; j <= high - 1; ++j)
+                    {
+                        if (array[j] < pivot)
+                        {
                             i++;
                             std::swap(array[i], array[j]);
                         }
@@ -677,15 +826,21 @@ void Functionality::visualizeQuickSort() {
                         // Render the array
                         window.clear();
                         window.draw(title);
-                        for (int k = 0; k < arraySize; ++k) {
+                        for (int k = 0; k < arraySize; ++k)
+                        {
                             sf::RectangleShape bar;
                             bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
                             bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
-                            if (k == i || k == j) {
+                            if (k == i || k == j)
+                            {
                                 bar.setFillColor(sf::Color::Red);
-                            } else if (k == high) {
+                            }
+                            else if (k == high)
+                            {
                                 bar.setFillColor(sf::Color::Blue);
-                            } else {
+                            }
+                            else
+                            {
                                 bar.setFillColor(sf::Color::White);
                             }
                             window.draw(bar);
@@ -694,7 +849,8 @@ void Functionality::visualizeQuickSort() {
 
                         sf::sleep(sf::milliseconds(5));
 
-                        if (!window.isOpen()) {
+                        if (!window.isOpen())
+                        {
                             break;
                         }
                     }
@@ -704,17 +860,25 @@ void Functionality::visualizeQuickSort() {
                     stack.push({low, pi - 1});
                     stack.push({pi + 1, high});
                 }
-            } else {
+            }
+            else
+            {
                 sorted = true;
                 clock.restart();
             }
-        } else {
-            if (clock.getElapsedTime().asSeconds() >= 10) {
+        }
+        else
+        {
+            if (clock.getElapsedTime().asSeconds() >= 10)
+            {
                 window.close();
-            } else {
+            }
+            else
+            {
                 window.clear();
                 window.draw(title);
-                for (int k = 0; k < arraySize; ++k) {
+                for (int k = 0; k < arraySize; ++k)
+                {
                     sf::RectangleShape bar;
                     bar.setSize(sf::Vector2f(window.getSize().x / arraySize, array[k]));
                     bar.setPosition(k * (window.getSize().x / arraySize), window.getSize().y - array[k]);
@@ -727,7 +891,9 @@ void Functionality::visualizeQuickSort() {
     }
 }
 
-std::string getCurrentTimestamp() {
+// Helper function to get the current time
+std::string getCurrentTimestamp()
+{
     std::time_t now = std::time(0);
     
     std::tm *ltm = std::localtime(&now);
@@ -738,10 +904,13 @@ std::string getCurrentTimestamp() {
     return std::string(buffer);
 }
 
-void Functionality::executeCommand(int command) {
+// Overall function that calls the appropriate command based on the input
+void Functionality::executeCommand(int command)
+{
     std::string currentTime = getCurrentTimestamp();
     auto start = std::chrono::high_resolution_clock::now();
-    switch (command) {
+    switch (command)
+    {
         case 0:
             setTenSecondTimer();
             history.push_back("Set a 10 second timer " + currentTime);
