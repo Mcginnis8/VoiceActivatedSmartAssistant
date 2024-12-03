@@ -21,6 +21,7 @@ public:
     void visualizeQuickSort();
     void playBeethoven();
     void createCalendarInvite();
+    void commandLog();
     void executeCommand(int command);
 };
 

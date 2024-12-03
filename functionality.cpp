@@ -14,6 +14,8 @@
 #include "main.h"
 #include <stack>
 
+std::vector<std::string> history;
+
 static size_t writeCallback(void* contents, size_t size, size_t nmemb, std::string* userp) {
     userp->append((char*)contents, size * nmemb);
     return size * nmemb;
@@ -611,6 +613,14 @@ void Functionality::visualizeSelectionSort() {
     }
 }
 
+void Functionality::commandLog() {
+    std::string historyText = "";
+    for (int i = 0; i < history.size(); i++) {
+        historyText += "\n" + history[i];
+    }
+    updateSFMLText(historyText);
+}
+
 void Functionality::visualizeQuickSort() {
     sf::VideoMode vm(1036, 569);
     sf::RenderWindow window(vm, "Quick Sort", sf::Style::Default);
@@ -717,58 +727,91 @@ void Functionality::visualizeQuickSort() {
     }
 }
 
+std::string getCurrentTimestamp() {
+    std::time_t now = std::time(0);
+    
+    std::tm *ltm = std::localtime(&now);
+    
+    char buffer[80];
+    std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", ltm);
+    
+    return std::string(buffer);
+}
+
 void Functionality::executeCommand(int command) {
+    std::string currentTime = getCurrentTimestamp();
     switch (command) {
         case 0:
             setTenSecondTimer();
+            history.push_back("Set a 10 second timer " + currentTime);
             break;
         case 1:
             setSixtySecondTimer();
+            history.push_back("Set a 60 second timer " + currentTime);
             break;
         case 2:
             setOneMinuteTimer();
+            history.push_back("Set a 1 minute timer " + currentTime);
             break;
         case 3:
             sayHello();
+            history.push_back("Say Hello " + currentTime);
             break;
         case 4:
             openGoogle();
+            history.push_back("Open Google " + currentTime);
             break;
         case 5:
             snake();
+            history.push_back("Play Snake " + currentTime);
             break;
         case 6:
             canvas();
+            history.push_back("Open Canvas " + currentTime);
             break;
         case 7:
             openYoutube();
+            history.push_back("Open Youtube " + currentTime);
             break;
         case 8:
             tellJoke();
+            history.push_back("Tell me a joke " + currentTime);
             break;
         case 9:
             weatherAtlanta();
+            history.push_back("Display weather in Atlanta " + currentTime);
             break;
         case 10:
             viewStockMarket();
+            history.push_back("View the stock market " + currentTime);
             break;
         case 11:
             visualizeBubbleSort();
+            history.push_back("Show bubble sort " + currentTime);
             break;
         case 12:
             visualizeInsertionSort();
+            history.push_back("Show insertion sort " + currentTime);
             break;
         case 13:
             visualizeSelectionSort();
+            history.push_back("Show selection sort " + currentTime);
             break;
         case 14:
             visualizeQuickSort();
+            history.push_back("Show quick sort " + currentTime);
             break;
         case 15:
             playBeethoven();
+            history.push_back("Play Music " + currentTime);
             break;
         case 16:
             createCalendarInvite();
+            history.push_back("Create a calendar invite " + currentTime);
+            break;
+        case 17:
+            commandLog();
+            history.push_back("Show the command log " + currentTime);
             break;
         default:
             std::cout << "Unknown command" << std::endl;

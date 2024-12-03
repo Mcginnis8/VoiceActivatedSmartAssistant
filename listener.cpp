@@ -51,7 +51,8 @@ int Listener::start_main_listen() {
         "Show selection sort",
         "Show quick sort",
         "Play Music",
-        "Create a calendar invite"
+        "Create a calendar invite",
+        "Show the command log"
     };
 
 
