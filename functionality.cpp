@@ -169,6 +169,9 @@ void Functionality::viewStockMarket() {
     sf::Text stock_text_SandP;
     sf::Text stock_text_DowJones;
     sf::Text stock_text_Nasdaq;
+    sf::Text stock_label_SandP;
+    sf::Text stock_label_DowJones;
+    sf::Text stock_label_Nasdaq;
 
     sf::Clock stock_clock;
 
@@ -177,20 +180,40 @@ void Functionality::viewStockMarket() {
         return;
     }
 
+    // Set up labels
+    stock_label_SandP.setFont(stock_font);
+    stock_label_SandP.setCharacterSize(36);
+    stock_label_SandP.setFillColor(sf::Color::Yellow);
+    stock_label_SandP.setPosition(20, 20);
+    stock_label_SandP.setString("S&P 500:");
+
+    stock_label_DowJones.setFont(stock_font);
+    stock_label_DowJones.setCharacterSize(36);
+    stock_label_DowJones.setFillColor(sf::Color::Yellow);
+    stock_label_DowJones.setPosition(350, 20);
+    stock_label_DowJones.setString("DJI/DIA");
+
+    stock_label_Nasdaq.setFont(stock_font);
+    stock_label_Nasdaq.setCharacterSize(36);
+    stock_label_Nasdaq.setFillColor(sf::Color::Yellow);
+    stock_label_Nasdaq.setPosition(700, 20);
+    stock_label_Nasdaq.setString("Nasdaq:");
+
+    // Set up text
     stock_text_SandP.setFont(stock_font);
-    stock_text_SandP.setCharacterSize(20);
+    stock_text_SandP.setCharacterSize(36);
     stock_text_SandP.setFillColor(sf::Color::White);
-    stock_text_SandP.setPosition(20, 20);
+    stock_text_SandP.setPosition(20, 60);
 
     stock_text_DowJones.setFont(stock_font);
-    stock_text_DowJones.setCharacterSize(20);
+    stock_text_DowJones.setCharacterSize(36);
     stock_text_DowJones.setFillColor(sf::Color::White);
-    stock_text_DowJones.setPosition(20, 50);
+    stock_text_DowJones.setPosition(350, 60);
 
     stock_text_Nasdaq.setFont(stock_font);
-    stock_text_Nasdaq.setCharacterSize(20);
+    stock_text_Nasdaq.setCharacterSize(36);
     stock_text_Nasdaq.setFillColor(sf::Color::White);
-    stock_text_Nasdaq.setPosition(20, 80);
+    stock_text_Nasdaq.setPosition(700, 60);
 
     bool firstRun = true;
 
@@ -269,13 +292,16 @@ void Functionality::viewStockMarket() {
         std::string price_DowJones = extract("05. price", response_DowJones);
         std::string price_Nasdaq = extract("05. price", response_Nasdaq);
 
-        stock_text_SandP.setString("S&P 500: " + price_SandP);
-        stock_text_DowJones.setString("Dow Jones ETF (DIA): " + price_DowJones);
-        stock_text_Nasdaq.setString("Nasdaq: " + price_Nasdaq);
+        stock_text_SandP.setString(price_SandP);
+        stock_text_DowJones.setString(price_DowJones);
+        stock_text_Nasdaq.setString(price_Nasdaq);
 
         stock_window.clear();
+        stock_window.draw(stock_label_SandP);
         stock_window.draw(stock_text_SandP);
+        stock_window.draw(stock_label_DowJones);
         stock_window.draw(stock_text_DowJones);
+        stock_window.draw(stock_label_Nasdaq);
         stock_window.draw(stock_text_Nasdaq);
         stock_window.display();
 
