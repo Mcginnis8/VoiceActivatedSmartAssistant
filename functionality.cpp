@@ -79,6 +79,12 @@ void Functionality::setOneMinuteTimer() {
     std::cout << "Time's up!" << std::endl;
 }
 
+void Functionality::playBeethoven() {
+    std::string command = "ffplay -autoexit -nodisp -t 10 beethoven.mp3";
+    system(command.c_str());
+    updateSFMLText("Playback finished.");
+}
+
 void Functionality::sayHello() {
     std::cout << "Hello!" << std::endl;
     updateSFMLText("Hello!");
@@ -702,6 +708,9 @@ void Functionality::executeCommand(int command) {
             break;
         case 14:
             visualizeQuickSort();
+            break;
+        case 15:
+            playBeethoven();
             break;
         default:
             std::cout << "Unknown command" << std::endl;

@@ -50,6 +50,7 @@ int Listener::start_main_listen() {
         "Show insertion sort",
         "Show selection sort",
         "Show quick sort",
+        "Play Music"
     };
 
 
