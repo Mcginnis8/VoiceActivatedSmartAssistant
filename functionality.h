@@ -20,6 +20,7 @@ public:
     void visualizeSelectionSort();
     void visualizeQuickSort();
     void playBeethoven();
+    void createCalendarInvite();
     void executeCommand(int command);
 };
 

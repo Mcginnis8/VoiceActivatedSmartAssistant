@@ -69,6 +69,35 @@ void Functionality::setSixtySecondTimer() {
     std::cout << "Time's up!" << std::endl;
 }
 
+void Functionality::createCalendarInvite() {
+    // Get current time and time + 30 minutes
+    time_t now = time(0);
+    time_t later = now + (30 * 60); // 30 minutes in seconds
+    
+    struct tm* start_tm = localtime(&now);
+    struct tm* end_tm = localtime(&later);
+    
+    // Format times in iCal format (YYYYMMDDTHHMMSS)
+    char start_date[17], end_date[17];
+    strftime(start_date, sizeof(start_date), "%Y%m%dT%H%M%S", start_tm);
+    strftime(end_date, sizeof(end_date), "%Y%m%dT%H%M%S", end_tm);
+    
+    // Create .ics file
+    std::ofstream ics_file("ECE4122_event.ics");
+    ics_file << "BEGIN:VCALENDAR\n"
+             << "VERSION:2.0\n"
+             << "BEGIN:VEVENT\n"
+             << "SUMMARY:ECE 4122/6122\n"
+             << "DTSTART:" << start_date << "\n"
+             << "DTEND:" << end_date << "\n"
+             << "END:VEVENT\n"
+             << "END:VCALENDAR";
+    ics_file.close();
+    
+    std::cout << "Calendar invite created Check Build Directory for file: ECE4122_event.ics" << std::endl;
+    updateSFMLText("Calendar invite created!");
+}
+
 void Functionality::setOneMinuteTimer() {
     for (int i = 60; i > 0; i--) {
         std::cout << i << std::endl;
@@ -737,6 +766,9 @@ void Functionality::executeCommand(int command) {
             break;
         case 15:
             playBeethoven();
+            break;
+        case 16:
+            createCalendarInvite();
             break;
         default:
             std::cout << "Unknown command" << std::endl;
