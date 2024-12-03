@@ -740,6 +740,7 @@ std::string getCurrentTimestamp() {
 
 void Functionality::executeCommand(int command) {
     std::string currentTime = getCurrentTimestamp();
+    auto start = std::chrono::high_resolution_clock::now();
     switch (command) {
         case 0:
             setTenSecondTimer();
@@ -818,4 +819,8 @@ void Functionality::executeCommand(int command) {
             updateSFMLText("Unknown command");
             break;
     }
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout << "Time taken for command \"" << history[history.size() - 1] << "\": " << duration.count() << " milliseconds." << std::endl;
+
 }
